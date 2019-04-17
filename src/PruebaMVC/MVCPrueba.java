@@ -2,7 +2,7 @@ package PruebaMVC;
 import Vista.*;
 import Modelo.*;
 import Controlador.*;
-
+//Hello
 public class MVCPrueba {
 
 	public static void main(String[] args) {
