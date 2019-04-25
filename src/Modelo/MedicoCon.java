@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+
+//Ya no existe MEDICO!!!
+
 public class MedicoCon {
 	
 	ConectarBD conectar;

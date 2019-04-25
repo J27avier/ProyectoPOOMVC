@@ -13,5 +13,5 @@ public class MVCPrueba {
 
 		vistaM.setVisible(true);
 	}
-
+ 
 }
