@@ -50,7 +50,7 @@ public class Empleado {
 	public String getAPaterno() {
 		return APaterno;
 	}
-	public void setApaterno(String apaterno) {
+	public void setAPaterno(String apaterno) {
 		APaterno = apaterno;
 	}
 	public String getAMaterno() {
