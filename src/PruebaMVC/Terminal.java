@@ -29,7 +29,7 @@ public class Terminal {
 			
 			//BUSCAR EMPLEADO POR ID
 			emp = busc.bEmpleado(2);
-			emp.Imprimir();
+			System.out.println(emp.toString());
 			
 		}catch(Exception e){
 			System.out.println(e);

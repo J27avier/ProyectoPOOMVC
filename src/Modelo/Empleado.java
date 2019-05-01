@@ -3,6 +3,7 @@
 import java.sql.Date;
 
 public class Empleado {
+
 	private int id_empleado;
 	private String Nombre;
 	private String APaterno;
@@ -23,16 +24,12 @@ public class Empleado {
 	}
 	public Empleado() {
 	}
-	
-	public void Imprimir(){
-		System.out.println("id_empleado: " + String.valueOf(id_empleado));
-		System.out.println("Nombre: " + Nombre);
-		System.out.println("Apaterno: " + APaterno);
-		System.out.println("AMaterno: " + AMaterno);
-		System.out.println("Sexo: " + Sexo);
-		System.out.println("DOB: " + String.valueOf(DOB));
-		System.out.println("Dir: " + Dir);
-		System.out.println("Ocupacion: " + Ocupacion);
+	@Override
+	public String toString() {
+		return "Empleado [id_empleado=" + id_empleado + ", Nombre=" + Nombre
+				+ ", APaterno=" + APaterno + ", AMaterno=" + AMaterno
+				+ ", Sexo=" + Sexo + ", DOB=" + DOB + ", Dir=" + Dir
+				+ ", Ocupacion=" + Ocupacion + "]";
 	}
 	
 	public int getId_empleado() {
