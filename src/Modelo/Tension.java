@@ -17,7 +17,6 @@ public class Tension {
 	public Tension(){};
 	public Tension(int id_tension, int id_paciente, int d1, int d2, int d3,
 			int d4, int d5, int d6, int d7, int d8, int d9) {
-		super();
 		this.id_tension = id_tension;
 		this.id_paciente = id_paciente;
 		D1 = d1;
