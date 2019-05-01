@@ -158,4 +158,53 @@ public class Buscar{
 		
 		return pac;
 	}
+	
+	public Tension bTension(int id_p){
+		Tension ten = new Tension();
+		ten.setId_tension(-1);
+		
+		try {
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Tension WHERE id_paciente = ?");
+			stmt.setString(1, String.valueOf(id_p));
+			ResultSet rs = stmt.executeQuery();
+			if(rs.next()){
+				ten.setId_tension(rs.getInt("id_tension"));
+				ten.setId_paciente(rs.getInt("id_paciente"));
+				ten.setD1(rs.getDouble("D1"));
+				ten.setD2(rs.getDouble("D2"));
+				ten.setD3(rs.getDouble("D3"));
+				ten.setD4(rs.getDouble("D4"));
+				ten.setD5(rs.getDouble("D5"));
+				ten.setD6(rs.getDouble("D6"));
+				ten.setD7(rs.getDouble("D7"));
+				ten.setD8(rs.getDouble("D8"));
+				ten.setD9(rs.getDouble("D9"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return ten;
+	}
+	public Trastornos bTrastornos(int id_p){
+		Trastornos tra = new Trastornos();
+		tra.setId_trastorno(-1);
+		try {
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Trastornos WHERE id_paciente = ?");
+			stmt.setString(1, String.valueOf(id_p));
+			ResultSet rs = stmt.executeQuery();
+			if(rs.next()){
+				tra.setId_trastorno(rs.getInt("id_trastorno"));
+				tra.setId_paciente(rs.getInt("id_paciente"));
+				tra.setE0_1(rs.getInt("E0_1"));
+				tra.setE0_2(rs.getInt("E0_2"));
+				tra.setE1(rs.getInt("E1"));
+				tra.setE2(rs.getInt("E2"));
+				tra.setETotal(rs.getInt("ETotal"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return tra;
+	}
 }

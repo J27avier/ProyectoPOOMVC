@@ -94,6 +94,25 @@ public class Terminal {
 		}catch(Exception e){
 			e.printStackTrace();
 		}/**/
+		//Buscar tensión
+		try{
+			Buscar bus5 = new Buscar(conect.getConnection());
+			Tension ten5 = new Tension();
+			ten5 = bus5.bTension(10);
+			if(ten5.getId_tension()!= -1)
+				System.out.println(ten5.toString());
+			else
+				System.out.println("No se encontró la tensión");
+			
+			Trastornos tra5 = new Trastornos();
+			tra5 = bus5.bTrastornos(10);
+			if(tra5.getId_trastorno() != -1)
+				System.out.println(tra5.toString());
+			else
+				System.out.println("No se encontró trastornos");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 
 }
