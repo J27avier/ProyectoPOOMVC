@@ -36,15 +36,12 @@ public class Paciente {
 	private String C4;
 	
 	public Paciente(){};
-	public Paciente(int id_paciente, int id_empleado, String b1_1, String b1_2,
+	public Paciente(String b1_1, String b1_2,
 			String b1_3, String b2, Date b3, int b4, String b5_1, String b5_2,
 			String b5_3, String b5_4, String b5_5, String b5_6, String b6,
 			String b7, int b8_1, int b8_2, String b9, String b10, int b11,
 			String b12, String b13, int b14, String b14_1, int b15,
 			String b15_1, String c1, String c2, String c3, String c4) {
-		super();
-		this.id_paciente = id_paciente;
-		this.id_empleado = id_empleado;
 		B1_1 = b1_1;
 		B1_2 = b1_2;
 		B1_3 = b1_3;
