@@ -9,11 +9,8 @@ public class Trastornos {
 	private int E2;
 	private int ETotal;
 	
-	public Trastornos(){};
-	public Trastornos(int id_trastorno, int id_paciente, int e0_1, int e0_2,
-			int e1, int e2, int eTotal) {
-		this.id_trastorno = id_trastorno;
-		this.id_paciente = id_paciente;
+	public Trastornos(){}
+	public Trastornos(int e0_1, int e0_2, int e1, int e2, int eTotal) {
 		E0_1 = e0_1;
 		E0_2 = e0_2;
 		E1 = e1;

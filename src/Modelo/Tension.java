@@ -14,7 +14,7 @@ public class Tension {
 	private int D8;
 	private int D9;
 	
-	public Tension(){};
+	public Tension(){}
 	public Tension(int id_tension, int id_paciente, int d1, int d2, int d3,
 			int d4, int d5, int d6, int d7, int d8, int d9) {
 		this.id_tension = id_tension;
