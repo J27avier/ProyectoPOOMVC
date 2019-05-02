@@ -7,17 +7,17 @@ import java.awt.event.*;
 public class PagPrincipal extends JFrame
 {
   private JButton Opcion1;
-  private JButton Opcion2;
+  public JButton Opcion2;
   private JButton Opcion3;
   private JButton Opcion4;
-  private JButton Opcion5;
+  public JButton Opcion5;
   private JButton Opcion6;
   private Container cp;
 
   private JLabel Menu;
 
 
-  PagPrincipal()
+  public PagPrincipal()
   {
     super("Clinica");
     setSize(1000,500);
@@ -55,22 +55,5 @@ public class PagPrincipal extends JFrame
     cp = getContentPane();
     cp.add(menuPrincipal);
 
-    //Se crea el manejador de eventos.
-    ManejadorEventos manejador = new ManejadorEventos();
-    Opcion5.addActionListener(manejador);
-
   }
-  //inicia la clase de manejador de eventos
-  private class ManejadorEventos implements ActionListener
-  {
-    public void actionPerformed(ActionEvent evento)
-    {
-      //Codigo para cuando seleccione "Ingresar empleado"
-      if(evento.getSource()==Opcion5)
-      {
-        PagIngEmpleado ventana = new PagIngEmpleado();
-        ventana.setVisible(true);
-      }//opcion5
-    }
-  }//manejador
 }//clase

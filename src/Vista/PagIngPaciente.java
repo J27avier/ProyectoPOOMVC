@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PagIngEmpleado extends JFrame
+public class PagIngPaciente extends JFrame
 {
   private JButton Opcion1;
   private JButton Opcion2;
@@ -17,9 +17,9 @@ public class PagIngEmpleado extends JFrame
   private JLabel Menu;
 
 
-  public PagIngEmpleado()
+  PagIngPaciente()
   {
-    super("Dar de alta un empleado");
+    super("Ingresar Paciente");
     setSize(1000,500);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setResizable(true);

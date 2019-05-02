@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PagIngEmpleado extends JFrame
+public class PagBusCita extends JFrame
 {
   private JButton Opcion1;
   private JButton Opcion2;
@@ -17,7 +17,7 @@ public class PagIngEmpleado extends JFrame
   private JLabel Menu;
 
 
-  public PagIngEmpleado()
+  PagBusCita()
   {
     super("Dar de alta un empleado");
     setSize(1000,500);
