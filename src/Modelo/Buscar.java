@@ -233,6 +233,7 @@ public class Buscar{
 		return emo;
 	}
 	public Comorbilidad bComorbilidad(int id_p){
+
 		Comorbilidad com = new Comorbilidad();
 		com.setId_comorbilidad(-1);
 		try {
@@ -307,4 +308,29 @@ public class Buscar{
 		}
 		return com;
 	}
+	public ArrayList<Cita> bCita(String[] paramsE){
+		ArrayList<Cita> citArr = new ArrayList<Cita>();
+		Empleado emp = new Empleado();
+		emp = bEmpleado(paramsE); // A ver si no sale un error raro
+		
+		try {
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM CITA WHERE id_empleado = ?");
+			stmt.setString(1, String.valueOf(emp.getId_empleado()));
+			ResultSet rs = stmt.executeQuery();
+			while(rs.next()){
+				Cita citaTemp = new Cita();
+				citaTemp.setId_cita(rs.getInt("id_cita"));
+				citaTemp.setId_empleado(rs.getInt("id_empleado"));
+				citaTemp.setId_paciente(rs.getInt("id_paciente"));
+				citaTemp.setFecha(rs.getDate("Fecha"));
+				citArr.add(citaTemp);
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		
+		return citArr;
+	}
+	
 }

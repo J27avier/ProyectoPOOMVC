@@ -225,5 +225,35 @@ public class Insertar {
 		}
 		return 1;
 	}
-
+	
+	public int iCita(Cita cit){
+		try {
+			PreparedStatement stmt = conn.prepareStatement("INSERT INTO Cita (id_empleado, id_paciente, Fecha) VALUES (?, ?, ?)");
+			stmt.setString(1, String.valueOf(cit.getId_empleado()));
+			stmt.setString(2, String.valueOf(cit.getId_paciente()));
+			stmt.setString(3, String.valueOf(cit.getFecha()));
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error al insertar cita");
+			return 0;
+		}
+		return 1;
+	}
+	public int iCita(Empleado emp, Paciente pac, Cita cit){
+		cit.setId_empleado(emp.getId_empleado());
+		cit.setId_paciente(pac.getId_paciente());
+		try {
+			PreparedStatement stmt = conn.prepareStatement("INSERT INTO Cita (id_empleado, id_paciente, Fecha) VALUES (?, ?, ?)");
+			stmt.setString(1, String.valueOf(cit.getId_empleado()));
+			stmt.setString(2, String.valueOf(cit.getId_paciente()));
+			stmt.setString(3, String.valueOf(cit.getFecha()));
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error al insertar cita");
+			return 0;
+		}
+		return 1;
+	}
 }

@@ -1,6 +1,7 @@
 package PruebaMVC;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 import Modelo.*;
 
@@ -15,7 +16,7 @@ public class Terminal {
 			
 			AGREGAR A UN EMPLEADO
 			Insert insert = new Insert(conect.getConnection());
-			Empleado emp1 = new Empleado("Gerardo", "Zepeda", "Gom", "hombre", Date.valueOf("1994-07-12"), "Calle Y", "otro");
+			Empleado emp1 = new Empleado("Agustin", "Pliego", "Abraham", "hombre", Date.valueOf("1962-07-12"), "Calle Y", "otro");
 			int success = insert.iEmpleado(emp1);
 			if(success == 1)
 				System.out.println("El empleado se agregó");
@@ -95,6 +96,7 @@ public class Terminal {
 			e.printStackTrace();
 		}/**/
 		//Buscar tablas relacionadas a paciente
+		/*
 		try{
 			Buscar bus5 = new Buscar(conect.getConnection());
 			Tension ten5 = new Tension();
@@ -125,6 +127,31 @@ public class Terminal {
 				System.out.println(com5.toString());
 			else
 				System.out.println("No se encontró emocional");
+		}catch(Exception e){
+			e.printStackTrace();
+		} /**/
+		// Insertar cita
+		/*
+		try{
+			Insertar ins7 = new Insertar(conect.getConnection());
+			Cita cit7 = new Cita(1, 8, Date.valueOf("2019-03-20"));
+			int success = ins7.iCita(cit7);
+			if(success == 1)
+				System.out.println("La cita se agregó");
+			else
+				System.out.println("La cita no se agregó");
+		}catch(Exception e){
+			e.printStackTrace();
+		}/*/
+		// Buscar Arreglo de citas
+		try{
+			Buscar bus8 = new Buscar(conect.getConnection());
+			String[] paramsE = {"Javier", "Sales", "Ortiz"};
+			ArrayList<Cita> citaArr = new ArrayList<Cita>();
+			citaArr = bus8.bCita(paramsE);
+			for(Cita citaTemp : citaArr){
+				System.out.println(citaTemp.toString());
+			}
 		}catch(Exception e){
 			e.printStackTrace();
 		}
