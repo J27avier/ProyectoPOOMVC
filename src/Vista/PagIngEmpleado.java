@@ -34,7 +34,7 @@ public class PagIngEmpleado extends JFrame
     menuPrincipal.setLayout(null);
 
     LNombre = new JLabel("Nombre(s):");
-    LNombre.setbounds(400,50,200,25);
+    LNombre.setBounds(400,50,200,25);
     menuPrincipal.add(LNombre);
 
     LAPaterno = new JLabel("Apellido Paterno:");
