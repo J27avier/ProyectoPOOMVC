@@ -10,7 +10,7 @@ import Modelo.MedicoCon;
 import Vista.VistaMedico;
 
 public class Controlador implements ActionListener{
-	
+
 	VistaMedico vistaM = new VistaMedico();
 	MedicoCon medcon = new MedicoCon();   // listamedico
 	
