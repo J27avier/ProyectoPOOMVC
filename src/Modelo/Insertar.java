@@ -1,3 +1,5 @@
+//Inserta objetos a la BD
+//Regresa 1 si exitoso y 0 si fallido
 package Modelo;
 
 

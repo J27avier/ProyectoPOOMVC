@@ -1,5 +1,5 @@
 // Busca a renglones de la base de datos
-// Si una clase no se encuetra, se regresa con id = -1
+// Si una objeto no se encuetra, se regresa con id = -1
 
 package Modelo;
 
@@ -206,5 +206,105 @@ public class Buscar{
 		}
 		
 		return tra;
+	}
+	public Emocional bEmocional(int id_p){
+		Emocional emo = new Emocional();
+		emo.setId_emocional(-1);
+		PreparedStatement stmt;
+		try {
+			stmt = conn.prepareStatement("SELECT * FROM Emocional WHERE id_paciente = ?");
+			stmt.setString(1, String.valueOf(id_p));
+			ResultSet rs = stmt.executeQuery();
+			if(rs.next()){
+				emo.setId_emocional(rs.getInt("id_emocional"));
+				emo.setId_paciente(rs.getInt("id_paciente"));
+				emo.setF1(rs.getInt("F1"));
+				emo.setF2(rs.getInt("F2"));
+				emo.setF3(rs.getInt("F3"));
+				emo.setF4(rs.getInt("F4"));
+				emo.setF5(rs.getInt("F5"));
+				emo.setF6(rs.getInt("F6"));
+				emo.setF7(rs.getInt("F7"));
+				emo.setFTotal(rs.getInt("FTotal"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return emo;
+	}
+	public Comorbilidad bComorbilidad(int id_p){
+		Comorbilidad com = new Comorbilidad();
+		com.setId_comorbilidad(-1);
+		try {
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Comorbilidad WHERE id_paciente = ?");
+			stmt.setString(1, String.valueOf(id_p));
+			ResultSet rs = stmt.executeQuery();
+			if(rs.next()){
+				com.setId_comorbilidad(rs.getInt("id_comorbilidad"));
+				com.setId_paciente(rs.getInt("id_paciente"));
+				com.setG1(rs.getInt("G1"));
+				com.setG2(rs.getInt("G2"));
+				com.setG3(rs.getInt("G3"));
+				com.setG4(rs.getInt("G4"));
+				com.setG5(rs.getInt("G5"));
+				com.setG6(rs.getInt("G6"));
+				com.setG7(rs.getInt("G7"));
+				com.setG8(rs.getInt("G8"));
+				com.setG9(rs.getInt("G9"));
+				com.setG10(rs.getInt("G10"));
+				com.setG11(rs.getInt("G11"));
+				com.setG12(rs.getInt("G12"));
+				com.setG13(rs.getInt("G13"));
+				com.setG14(rs.getInt("G14"));
+				com.setG15(rs.getInt("G15"));
+				com.setG16(rs.getInt("G16"));
+				com.setG17(rs.getInt("G17"));
+				com.setG18(rs.getInt("G18"));
+				com.setG19(rs.getInt("G19"));
+				com.setGTotal(rs.getInt("GTotal"));
+				com.setG20(rs.getInt("G20"));
+				com.setG21(rs.getInt("G21"));
+				com.setG22(rs.getInt("G22"));
+				com.setG23(rs.getInt("G23"));
+				com.setG24(rs.getInt("G24"));
+				com.setG25(rs.getInt("G25"));
+				com.setG26(rs.getInt("G26"));
+				com.setG26_1_1(rs.getInt("G26_1_1"));
+				com.setG26_1_2(rs.getInt("G26_1_2"));
+				com.setG26_1_3(rs.getInt("G26_1_3"));
+				com.setG26_1_4(rs.getInt("G26_1_4"));
+				com.setG26_2(rs.getString("G26_2"));
+				com.setG26_2_1(rs.getInt("G26_2_1"));
+				com.setG26_3(rs.getString("G26_3"));
+				com.setG26_3_1(rs.getInt("G26_3_1"));
+				com.setG26_4(rs.getString("G26_4"));
+				com.setG26_4_1(rs.getInt("G26_4_1"));
+				com.setG26_5(rs.getInt("G26_5"));
+				com.setG26_5_1(rs.getInt("G26_5_1"));
+				com.setG26_5_2(rs.getInt("G26_5_2"));
+				com.setG26_5_3(rs.getInt("G26_5_3"));
+				com.setG26_5_4(rs.getInt("G26_5_4"));
+				com.setG26_5_5(rs.getString("G26_5_5"));
+				com.setG26_5_5_1(rs.getInt("G26_5_5_1"));
+				com.setG26_5_6(rs.getString("G26_5_6"));
+				com.setG26_5_6_1(rs.getInt("G26_5_6_1"));
+				com.setG26_5_7(rs.getString("G26_5_7"));
+				com.setG26_5_7_1(rs.getInt("G26_5_7_1"));
+				com.setG26_5_8_1(rs.getInt("G26_5_8_1"));
+				com.setG26_5_8_2(rs.getInt("G26_5_8_2"));
+				com.setG26_5_8_3(rs.getInt("G26_5_8_3"));
+				com.setG26_5_8_4(rs.getInt("G26_5_8_4"));
+				com.setG27(rs.getInt("G27"));
+				com.setG28(rs.getInt("G28"));
+				com.setG29(rs.getInt("G29"));
+				com.setG30(rs.getString("G30"));
+				com.setG30_1(rs.getString("G30_1"));
+				com.setG31(rs.getString("G31"));
+				com.setG31_1(rs.getInt("G31_1"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return com;
 	}
 }

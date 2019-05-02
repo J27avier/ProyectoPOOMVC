@@ -94,22 +94,37 @@ public class Terminal {
 		}catch(Exception e){
 			e.printStackTrace();
 		}/**/
-		//Buscar tensión
+		//Buscar tablas relacionadas a paciente
 		try{
 			Buscar bus5 = new Buscar(conect.getConnection());
 			Tension ten5 = new Tension();
+			Trastornos tra5 = new Trastornos();
+			Emocional emo5 = new Emocional();
+			Comorbilidad com5 = new Comorbilidad();
+			
 			ten5 = bus5.bTension(10);
 			if(ten5.getId_tension()!= -1)
 				System.out.println(ten5.toString());
 			else
-				System.out.println("No se encontró la tensión");
+				System.out.println("No se encontró tensión");
 			
-			Trastornos tra5 = new Trastornos();
 			tra5 = bus5.bTrastornos(10);
 			if(tra5.getId_trastorno() != -1)
 				System.out.println(tra5.toString());
 			else
 				System.out.println("No se encontró trastornos");
+			
+			emo5 = bus5.bEmocional(10);
+			if(emo5.getId_emocional()!= -1)
+				System.out.println(emo5.toString());
+			else
+				System.out.println("No se encontró emocional");
+			
+			com5 = bus5.bComorbilidad(10);
+			if(com5.getId_comorbilidad()!= -1)
+				System.out.println(com5.toString());
+			else
+				System.out.println("No se encontró emocional");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

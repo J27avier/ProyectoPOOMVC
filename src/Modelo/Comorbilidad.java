@@ -1,7 +1,7 @@
 package Modelo;
 
 public class Comorbilidad {
-	private int id_comorbiidad;
+	private int id_comorbilidad;
 	private int id_paciente;
 	private int G1;
 	private int G2;
@@ -140,7 +140,7 @@ public class Comorbilidad {
 
 	@Override
 	public String toString() {
-		return "Comorbilidad [id_comorbiidad=" + id_comorbiidad
+		return "Comorbilidad [id_comorbilidad=" + id_comorbilidad
 				+ ", id_paciente=" + id_paciente + ", G1=" + G1 + ", G2=" + G2
 				+ ", G3=" + G3 + ", G4=" + G4 + ", G5=" + G5 + ", G6=" + G6
 				+ ", G7=" + G7 + ", G8=" + G8 + ", G9=" + G9 + ", G10=" + G10
@@ -165,12 +165,12 @@ public class Comorbilidad {
 				+ ", G31=" + G31 + ", G31_1=" + G31_1 + "]";
 	}
 
-	public int getId_comorbiidad() {
-		return id_comorbiidad;
+	public int getId_comorbilidad() {
+		return id_comorbilidad;
 	}
 
-	public void setId_comorbiidad(int id_comorbiidad) {
-		this.id_comorbiidad = id_comorbiidad;
+	public void setId_comorbilidad(int id_comorbilidad) {
+		this.id_comorbilidad = id_comorbilidad;
 	}
 
 	public int getId_paciente() {
