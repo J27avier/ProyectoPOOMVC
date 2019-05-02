@@ -1,4 +1,4 @@
-package Vista;
+//package Vista;
 
 import java.awt.*;
 import javax.swing.*;
@@ -55,22 +55,9 @@ public class PagPrincipal extends JFrame
     cp = getContentPane();
     cp.add(menuPrincipal);
 
-    //Se crea el manejador de eventos.
-    ManejadorEventos manejador = new ManejadorEventos();
-    Opcion5.addActionListener(manejador);
+
 
   }
   //inicia la clase de manejador de eventos
-  private class ManejadorEventos implements ActionListener
-  {
-    public void actionPerformed(ActionEvent evento)
-    {
-      //Codigo para cuando seleccione "Ingresar empleado"
-      if(evento.getSource()==Opcion5)
-      {
-        PagIngEmpleado ventana = new PagIngEmpleado();
-        ventana.setVisible(true);
-      }//opcion5
-    }
-  }//manejador
+//manejador
 }//clase

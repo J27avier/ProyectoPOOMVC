@@ -4,20 +4,25 @@ import java.awt.event.*;
 
 public class PagIngEmpleado extends JFrame
 {
-  private JButton Opcion1;
-  private JButton Opcion2;
-  private JButton Opcion3;
-  private JButton Opcion4;
-  private JButton Opcion5;
-  private JButton Opcion6;
+  private JLabel LNombre;
+  private JLabel LAPaterno;
+  private JLabel LAMaterno;
+  private JLabel LSexo;
+  private JLabel LFechaNac;
+  private JLabel LDireccion;
+  private JLabel LOcupacion;
+  private JTextField TNombre;
+  private JTextField TAPaterno;
+  private JTextField TAMaterno;
+  private JTextField TDireccion;
+
   private Container cp;
 
-  private JLabel Menu;
 
 
   PagIngEmpleado()
   {
-    super("Dar de alta un empleado");
+    super("Dar de alta un empleado00");
     setSize(1000,500);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setResizable(true);
@@ -26,33 +31,38 @@ public class PagIngEmpleado extends JFrame
     JPanel menuPrincipal = new JPanel();
     menuPrincipal.setLayout(null);
 
-    Opcion1 = new JButton("Buscar paciente");
-    Opcion1.setBounds(400,50,200,25);
-    menuPrincipal.add(Opcion1);
+    LNombre = new JLabel("Nombre(s):");
+    LNombre.setbounds(400,50,200,25);
+    menuPrincipal.add(LNombre);
 
-    Opcion2 = new JButton("Buscar empleado");
-    Opcion2.setBounds(400,90,200,25);
-    menuPrincipal.add(Opcion2);
+    LAPaterno = new JLabel("Apellido Paterno:");
+    LAPaterno.setBounds(400,90,200,25);
+    menuPrincipal.add(LAPaterno);
 
-    Opcion3 = new JButton("Buscar cita");
-    Opcion3.setBounds(400,130,200,25);
-    menuPrincipal.add(Opcion3);
+    LAMaterno = new JLabel("Apellido Materno:");
+    LAMaterno.setBounds(400,130,200,25);
+    menuPrincipal.add(LAMaterno);
 
-    Opcion4 = new JButton("Ingresar paciente nuevo");
-    Opcion4.setBounds(400,170,200,25);
-    menuPrincipal.add(Opcion4);
+    LSexo = new JLabel("Sexo:");
+    LSexo.setBounds(400,170,200,25);
+    menuPrincipal.add(LSexo);
 
-    Opcion5 = new JButton("Ingresar empleado");
-    Opcion5.setBounds(400,210,200,25);
-    menuPrincipal.add(Opcion5);
+    LFechaNac = new JLabel("Fecha de Nacimiento:");
+    LFechaNac.setBounds(400,210,200,25);
+    menuPrincipal.add(LFechaNac);
 
-    Opcion6 = new JButton("Agendar cita");
-    Opcion6.setBounds(400,250,200,25);
-    menuPrincipal.add(Opcion6);
+    LDireccion = new JLabel("Dirección:");
+    LDireccion.setBounds(400,250,200,25);
+    menuPrincipal.add(LDireccion);
+
+    LOcupacion = new JLabel("Ocupación:");
+    LOcupacion.setBounds(400,290,200,25);
+    menuPrincipal.add(LOcupacion);
+
 
     cp = getContentPane();
     cp.add(menuPrincipal);
-    
+
 
   }
 }
