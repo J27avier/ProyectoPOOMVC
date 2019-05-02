@@ -61,6 +61,32 @@ public class PagIngEmpleado extends JFrame
     LOcupacion.setBounds(400,290,200,25);
     menuPrincipal.add(LOcupacion);
 
+    TNombre = new JTextField();
+    TNombre.setBounds(350,50,200,25);
+    menuPrincipal.add(TNombre);
+
+    TAPaterno = new JTextField();
+    TAPaterno.setBounds(350,90,200,25);
+    menuPrincipal.add(TAPaterno);
+
+    TAMaterno = new JTextField();
+    TAMaterno.setBounds(350,130,200,25);
+    menuPrincipal.add(TAMaterno);
+
+    TDireccion = new JTextField();
+    TDireccion.setBounds(350,250,200,25);
+    menuPrincipal.add(TDireccion);
+
+    String[] opcionesSexo = { "hombre","mujer"};
+    final JComboBox<String> DSexo = new JComboBox<String>(opcionesSexo);
+    DSexo.setBounds(350,170,200,25);
+    menuPrincipal.add(DSexo);
+
+    String[] opcionesOcup = {"medico","otro"};
+    final JComboBox<String> DOcupacion = new JComboBox<String>(opcionesOcup);
+    DOcupacion.setBounds(350,290,200,25);
+    menuPrincipal.add(DOcupacion);
+
 
     cp = getContentPane();
     cp.add(menuPrincipal);
