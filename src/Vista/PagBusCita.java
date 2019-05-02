@@ -1,25 +1,25 @@
-//package Vista;
+package Vista;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PagPrincipal extends JFrame
+public class PagBusCita extends JFrame
 {
   private JButton Opcion1;
-  public JButton Opcion2;
+  private JButton Opcion2;
   private JButton Opcion3;
   private JButton Opcion4;
-  public JButton Opcion5;
+  private JButton Opcion5;
   private JButton Opcion6;
   private Container cp;
 
   private JLabel Menu;
 
 
-  public PagPrincipal()
+  PagBusCita()
   {
-    super("Clinica");
+    super("Dar de alta un empleado");
     setSize(1000,500);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setResizable(true);
@@ -54,6 +54,7 @@ public class PagPrincipal extends JFrame
 
     cp = getContentPane();
     cp.add(menuPrincipal);
+    
 
   }
-}//clase
+}

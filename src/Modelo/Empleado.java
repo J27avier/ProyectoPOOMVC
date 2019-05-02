@@ -3,25 +3,33 @@
 import java.sql.Date;
 
 public class Empleado {
+
 	private int id_empleado;
 	private String Nombre;
-	private String Apaterno;
+	private String APaterno;
 	private String AMaterno;
 	private String Sexo;
 	private Date DOB;
 	private String Dir;
 	private String Ocupacion;
 	
-	public Empleado(int id_empleado, String nombre, String apaterno,
-			String aMaterno, String sexo, Date dOB, String dir, String ocupacion) {
-		this.id_empleado = id_empleado;
+	public Empleado(String nombre, String apaterno, String aMaterno, String sexo, Date dOB, String dir, String ocupacion) {
 		Nombre = nombre;
-		Apaterno = apaterno;
+		APaterno = apaterno;
 		AMaterno = aMaterno;
 		Sexo = sexo;
 		DOB = dOB;
 		Dir = dir;
 		Ocupacion = ocupacion;
+	}
+	public Empleado() {
+	}
+	@Override
+	public String toString() {
+		return "Empleado [id_empleado=" + id_empleado + ", Nombre=" + Nombre
+				+ ", APaterno=" + APaterno + ", AMaterno=" + AMaterno
+				+ ", Sexo=" + Sexo + ", DOB=" + DOB + ", Dir=" + Dir
+				+ ", Ocupacion=" + Ocupacion + "]";
 	}
 	
 	public int getId_empleado() {
@@ -36,11 +44,11 @@ public class Empleado {
 	public void setNombre(String nombre) {
 		Nombre = nombre;
 	}
-	public String getApaterno() {
-		return Apaterno;
+	public String getAPaterno() {
+		return APaterno;
 	}
-	public void setApaterno(String apaterno) {
-		Apaterno = apaterno;
+	public void setAPaterno(String apaterno) {
+		APaterno = apaterno;
 	}
 	public String getAMaterno() {
 		return AMaterno;

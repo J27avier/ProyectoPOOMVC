@@ -35,15 +35,13 @@ public class Paciente {
 	private String C3;
 	private String C4;
 	
-	public Paciente(int id_paciente, int id_empleado, String b1_1, String b1_2,
+	public Paciente(){};
+	public Paciente(String b1_1, String b1_2,
 			String b1_3, String b2, Date b3, int b4, String b5_1, String b5_2,
 			String b5_3, String b5_4, String b5_5, String b5_6, String b6,
 			String b7, int b8_1, int b8_2, String b9, String b10, int b11,
 			String b12, String b13, int b14, String b14_1, int b15,
 			String b15_1, String c1, String c2, String c3, String c4) {
-		super();
-		this.id_paciente = id_paciente;
-		this.id_empleado = id_empleado;
 		B1_1 = b1_1;
 		B1_2 = b1_2;
 		B1_3 = b1_3;
@@ -74,7 +72,21 @@ public class Paciente {
 		C3 = c3;
 		C4 = c4;
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Paciente [id_paciente=" + id_paciente + ", id_empleado="
+				+ id_empleado + ", B1_1=" + B1_1 + ", B1_2=" + B1_2 + ", B1_3="
+				+ B1_3 + ", B2=" + B2 + ", B3=" + B3 + ", B4=" + B4 + ", B5_1="
+				+ B5_1 + ", B5_2=" + B5_2 + ", B5_3=" + B5_3 + ", B5_4=" + B5_4
+				+ ", B5_5=" + B5_5 + ", B5_6=" + B5_6 + ", B6=" + B6 + ", B7="
+				+ B7 + ", B8_1=" + B8_1 + ", B8_2=" + B8_2 + ", B9=" + B9
+				+ ", B10=" + B10 + ", B11=" + B11 + ", B12=" + B12 + ", B13="
+				+ B13 + ", B14=" + B14 + ", B14_1=" + B14_1 + ", B15=" + B15
+				+ ", B15_1=" + B15_1 + ", C1=" + C1 + ", C2=" + C2 + ", C3="
+				+ C3 + ", C4=" + C4 + "]";
+	}
+	
 	public int getId_paciente() {
 		return id_paciente;
 	}

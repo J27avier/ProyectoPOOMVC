@@ -1,5 +1,5 @@
 package Modelo;
-//¡¡¡¡¡¡¡¡FALTA!!!!!!
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -25,7 +25,7 @@ public class ConectarBD {
 			
 			if (conn != null){
 				System.out.println("Se conecto");
-				System.out.println("con1.1");
+				//System.out.println("con1.1");
 			}
 			
 			

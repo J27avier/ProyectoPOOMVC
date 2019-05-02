@@ -1,3 +1,5 @@
+package Vista;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -20,7 +22,7 @@ public class PagIngEmpleado extends JFrame
 
 
 
-  PagIngEmpleado()
+  public PagIngEmpleado()
   {
     super("Dar de alta un empleado00");
     setSize(1000,500);
