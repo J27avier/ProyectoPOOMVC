@@ -34,57 +34,57 @@ public class PagIngEmpleado extends JFrame
     menuPrincipal.setLayout(null);
 
     LNombre = new JLabel("Nombre(s):");
-    LNombre.setbounds(400,50,200,25);
+    LNombre.setBounds(300,50,200,25);
     menuPrincipal.add(LNombre);
 
     LAPaterno = new JLabel("Apellido Paterno:");
-    LAPaterno.setBounds(400,90,200,25);
+    LAPaterno.setBounds(300,90,200,25);
     menuPrincipal.add(LAPaterno);
 
     LAMaterno = new JLabel("Apellido Materno:");
-    LAMaterno.setBounds(400,130,200,25);
+    LAMaterno.setBounds(300,130,200,25);
     menuPrincipal.add(LAMaterno);
 
     LSexo = new JLabel("Sexo:");
-    LSexo.setBounds(400,170,200,25);
+    LSexo.setBounds(300,170,200,25);
     menuPrincipal.add(LSexo);
 
     LFechaNac = new JLabel("Fecha de Nacimiento:");
-    LFechaNac.setBounds(400,210,200,25);
+    LFechaNac.setBounds(300,210,200,25);
     menuPrincipal.add(LFechaNac);
 
     LDireccion = new JLabel("Dirección:");
-    LDireccion.setBounds(400,250,200,25);
+    LDireccion.setBounds(300,250,200,25);
     menuPrincipal.add(LDireccion);
 
     LOcupacion = new JLabel("Ocupación:");
-    LOcupacion.setBounds(400,290,200,25);
+    LOcupacion.setBounds(300,290,200,25);
     menuPrincipal.add(LOcupacion);
 
     TNombre = new JTextField();
-    TNombre.setBounds(350,50,200,25);
+    TNombre.setBounds(450,50,200,25);
     menuPrincipal.add(TNombre);
 
     TAPaterno = new JTextField();
-    TAPaterno.setBounds(350,90,200,25);
+    TAPaterno.setBounds(450,90,200,25);
     menuPrincipal.add(TAPaterno);
 
     TAMaterno = new JTextField();
-    TAMaterno.setBounds(350,130,200,25);
+    TAMaterno.setBounds(450,130,200,25);
     menuPrincipal.add(TAMaterno);
 
     TDireccion = new JTextField();
-    TDireccion.setBounds(350,250,200,25);
+    TDireccion.setBounds(450,250,200,25);
     menuPrincipal.add(TDireccion);
 
     String[] opcionesSexo = { "hombre","mujer"};
     final JComboBox<String> DSexo = new JComboBox<String>(opcionesSexo);
-    DSexo.setBounds(350,170,200,25);
+    DSexo.setBounds(450,170,200,25);
     menuPrincipal.add(DSexo);
 
     String[] opcionesOcup = {"medico","otro"};
     final JComboBox<String> DOcupacion = new JComboBox<String>(opcionesOcup);
-    DOcupacion.setBounds(350,290,200,25);
+    DOcupacion.setBounds(450,290,200,25);
     menuPrincipal.add(DOcupacion);
 
 
