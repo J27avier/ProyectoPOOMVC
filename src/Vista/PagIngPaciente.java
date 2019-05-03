@@ -11,7 +11,7 @@ import java.awt.event.*;
 public class PagIngPaciente extends JFrame
 {
 	public Container cp;
-	public PagIngEmpleado()
+	public PagIngPaciente()
 	{
 		super("Dar de alta un empleado");
 		setSize(1000,500);
