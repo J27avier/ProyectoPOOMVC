@@ -5,8 +5,9 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PagIngPaciente extends JApplet
+public class PagIngPaciente extends JFrame
 {
+	
 	public void init()
 	{
 	  JTabbedPane pestaña=new JTabbedPane();
@@ -19,9 +20,9 @@ public class PagIngPaciente extends JApplet
 	  JPanel p3=new JPanel();
 	  JLabel l3=new JLabel("Este es el panel tres");
 	  p3.add(l3);
-	  pestaña.addTab("Pestaña Uno", p1);
-	  pestaña.addTab("Pestaña Dos", p2);
-	  pestaña.addTab("Pestaña Tres", p3);
+	  pestaña.addTab("Pestana Uno", p1);
+	  pestaña.addTab("Pestana Dos", p2);
+	  pestaña.addTab("Pestana Tres", p3);
 	  add(pestaña);
 	}
 }
