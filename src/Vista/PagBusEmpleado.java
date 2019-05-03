@@ -99,9 +99,9 @@ public class PagBusEmpleado extends JFrame
 		pSexo.add(lSexo);
 		pDOB.add(new JLabel("Fecha de nacimiento: "));
 		pDOB.add(lDOB);
-		pDir.add(new JLabel("Dirección"));
+		pDir.add(new JLabel("Direccion"));
 		pDir.add(lDir);
-		pOcupacion.add(new JLabel("Ocupación"));
+		pOcupacion.add(new JLabel("Ocupacion"));
 		pOcupacion.add(lOcupacion);
 		pResultado.add(pSexo);
 		pResultado.add(pDOB);
