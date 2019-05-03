@@ -34,8 +34,10 @@ public class ContPagPrincipal implements ActionListener
 		{
 			//Crear controlador ing empleado
 			Vista.PagIngEmpleado pIngEmp = new Vista.PagIngEmpleado();
+			ContIngEmpleado cIngE = new ContIngEmpleado(pIngEmp, conn);
 			pIngEmp.setVisible(true);
 			//Mandarle pIngEmp y conn a controlador ing empleado
+			
 		}
 	}
 }//manejador
