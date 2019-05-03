@@ -21,6 +21,7 @@ public class PagIngEmpleado extends JFrame
   public JTextField TAMaterno;
   public JTextField TDireccion;
   public JDateChooser dateChooser;
+  public JButton ingresar;
 
   public Container cp;
 
@@ -28,7 +29,7 @@ public class PagIngEmpleado extends JFrame
 
   public PagIngEmpleado()
   {
-    super("Dar de alta un empleado00");
+    super("Dar de alta un empleado");
     setSize(1000,500);
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setResizable(true);
@@ -57,11 +58,11 @@ public class PagIngEmpleado extends JFrame
     LFechaNac.setBounds(300,210,200,25);
     menuPrincipal.add(LFechaNac);
 
-    LDireccion = new JLabel("Dirección:");
+    LDireccion = new JLabel("Direccion:");
     LDireccion.setBounds(300,250,200,25);
     menuPrincipal.add(LDireccion);
 
-    LOcupacion = new JLabel("Ocupación:");
+    LOcupacion = new JLabel("Ocupacion:");
     LOcupacion.setBounds(300,290,200,25);
     menuPrincipal.add(LOcupacion);
 
@@ -97,6 +98,11 @@ public class PagIngEmpleado extends JFrame
     menuPrincipal.add(dateChooser);
     //para consultas del datechooser
     //http://datojava.blogspot.com/2015/11/jcalendarJavaSwingEjemploTutorial.html#ejemploJDateChooser
+    
+    ingresar = new JButton("Ingresar");
+    ingresar.setBounds(450,350,100,25);
+    menuPrincipal.add(ingresar);
+    
 
     cp = getContentPane();
     cp.add(menuPrincipal);
