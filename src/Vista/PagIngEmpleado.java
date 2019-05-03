@@ -22,6 +22,8 @@ public class PagIngEmpleado extends JFrame
   public JTextField TDireccion;
   public JDateChooser dateChooser;
   public JButton ingresar;
+  public final JComboBox<String> DSexo;
+  public final JComboBox<String> DOcupacion;
 
   public Container cp;
 
@@ -83,12 +85,12 @@ public class PagIngEmpleado extends JFrame
     menuPrincipal.add(TDireccion);
 
     String[] opcionesSexo = { "hombre","mujer"};
-    final JComboBox<String> DSexo = new JComboBox<String>(opcionesSexo);
+    DSexo = new JComboBox<String>(opcionesSexo);
     DSexo.setBounds(450,170,200,25);
     menuPrincipal.add(DSexo);
 
     String[] opcionesOcup = {"medico","otro"};
-    final JComboBox<String> DOcupacion = new JComboBox<String>(opcionesOcup);
+    DOcupacion = new JComboBox<String>(opcionesOcup);
     DOcupacion.setBounds(450,290,200,25);
     menuPrincipal.add(DOcupacion);
 
