@@ -17,18 +17,24 @@ public class ContPagPrincipal implements ActionListener
 	public ContPagPrincipal(Vista.PagPrincipal pPrincipal, Connection conn){
 		this.pPrincipal = pPrincipal;
 		this.conn = conn;
+		this.pPrincipal.Opcion2.addActionListener(this);
 		this.pPrincipal.Opcion4.addActionListener(this);
 		this.pPrincipal.Opcion5.addActionListener(this);
 	}
 
 	public void actionPerformed(ActionEvent evento)
 	{
+		if(evento.getSource()==pPrincipal.Opcion2){
+			PagBusEmpleado pBusEmp = new PagBusEmpleado();
+			//Controlador
+			pBusEmp.setVisible(true);
+			
+		}
 		if(evento.getSource()==pPrincipal.Opcion4)
 		{
 			//Crear controlador Ing paciente
 			Vista.PagIngPaciente pIngPac = new Vista.PagIngPaciente();
 			pIngPac.setVisible(true);
-			//Mandarle pInPac y conn a controlador Ing paciente
 		}
 		if(evento.getSource()==pPrincipal.Opcion5)
 		{

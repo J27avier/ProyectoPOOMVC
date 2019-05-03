@@ -2,7 +2,6 @@ package Vista;
 
 import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
 
 public class PagBusEmpleado extends JFrame
 {
@@ -20,7 +19,7 @@ public class PagBusEmpleado extends JFrame
 	public JPanel pDir;
 	public JPanel pOcupacion;
 
-	public Container cp;
+	private Container cp;
 
 
 	/*
@@ -60,6 +59,9 @@ public class PagBusEmpleado extends JFrame
 		pAmaterno.setLayout(new FlowLayout());
 		JPanel pBuscar = new JPanel();
 		pBuscar.setLayout(new FlowLayout());
+		JTextField tNombre = new JTextField(32);
+		JTextField tApaterno = new JTextField(32);
+		JTextField tAmaterno = new JTextField(32);
 		
 		JLabel lNombre = new JLabel("Nombre: ");
 		JLabel lApaterno = new JLabel("Apellido paterno: ");
@@ -83,8 +85,8 @@ public class PagBusEmpleado extends JFrame
 		lDir = new JLabel("___");
 		lOcupacion = new JLabel("___");
 		
-		pNombre.add(lNombre);
-		pNombre.add(tNombre);
+		pNombre.add(lNombre); 
+		pNombre.add(tNombre); 
 		pApaterno.add(lApaterno);
 		pApaterno.add(tApaterno);
 		pAmaterno.add(lAmaterno);
@@ -107,8 +109,9 @@ public class PagBusEmpleado extends JFrame
 		pResultado.add(pDOB);
 		pResultado.add(pDir);
 		pResultado.add(pOcupacion);
-		
-		cp = getContentPane();
+
+		cp = getContentPane(); 
+		cp.setLayout(new GridLayout(1,2));
 		cp.add(pDatos);
 		cp.add(pResultado);
 	}
