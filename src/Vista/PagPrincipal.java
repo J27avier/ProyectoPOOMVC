@@ -6,12 +6,12 @@ import java.awt.event.*;
 
 public class PagPrincipal extends JFrame
 {
-  private JButton Opcion1;
+  public JButton Opcion1;
   public JButton Opcion2;
-  private JButton Opcion3;
-  private JButton Opcion4;
+  public JButton Opcion3;
+  public JButton Opcion4;
   public JButton Opcion5;
-  private JButton Opcion6;
+  public JButton Opcion6;
   private Container cp;
 
   private JLabel Menu;

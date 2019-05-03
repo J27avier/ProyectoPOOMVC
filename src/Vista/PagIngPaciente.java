@@ -1,60 +1,27 @@
 package Vista;
 
 import java.awt.*;
+
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PagIngPaciente extends JFrame
+public class PagIngPaciente extends JApplet
 {
-  private JButton Opcion1;
-  private JButton Opcion2;
-  private JButton Opcion3;
-  private JButton Opcion4;
-  private JButton Opcion5;
-  private JButton Opcion6;
-  private Container cp;
-
-  private JLabel Menu;
-
-
-  PagIngPaciente()
-  {
-    super("Ingresar Paciente");
-    setSize(1000,500);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setResizable(true);
-
-
-    JPanel menuPrincipal = new JPanel();
-    menuPrincipal.setLayout(null);
-
-    Opcion1 = new JButton("Buscar paciente");
-    Opcion1.setBounds(400,50,200,25);
-    menuPrincipal.add(Opcion1);
-
-    Opcion2 = new JButton("Buscar empleado");
-    Opcion2.setBounds(400,90,200,25);
-    menuPrincipal.add(Opcion2);
-
-    Opcion3 = new JButton("Buscar cita");
-    Opcion3.setBounds(400,130,200,25);
-    menuPrincipal.add(Opcion3);
-
-    Opcion4 = new JButton("Ingresar paciente nuevo");
-    Opcion4.setBounds(400,170,200,25);
-    menuPrincipal.add(Opcion4);
-
-    Opcion5 = new JButton("Ingresar empleado");
-    Opcion5.setBounds(400,210,200,25);
-    menuPrincipal.add(Opcion5);
-
-    Opcion6 = new JButton("Agendar cita");
-    Opcion6.setBounds(400,250,200,25);
-    menuPrincipal.add(Opcion6);
-
-    cp = getContentPane();
-    cp.add(menuPrincipal);
-    
-
-  }
+	public void init()
+	{
+	  JTabbedPane pestaña=new JTabbedPane();
+	  JPanel p1=new JPanel();
+	  JLabel l1=new JLabel("Este es el panel uno");
+	  p1.add(l1);
+	  JPanel p2=new JPanel();
+	  JLabel l2=new JLabel("Este es el panel dos");
+	  p2.add(l2);
+	  JPanel p3=new JPanel();
+	  JLabel l3=new JLabel("Este es el panel tres");
+	  p3.add(l3);
+	  pestaña.addTab("Pestaña Uno", p1);
+	  pestaña.addTab("Pestaña Dos", p2);
+	  pestaña.addTab("Pestaña Tres", p3);
+	  add(pestaña);
+	}
 }

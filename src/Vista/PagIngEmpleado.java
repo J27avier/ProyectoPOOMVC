@@ -2,23 +2,27 @@ package Vista;
 
 import java.awt.*;
 import javax.swing.*;
+
+import com.toedter.calendar.JDateChooser;
+
 import java.awt.event.*;
 
 public class PagIngEmpleado extends JFrame
 {
-  private JLabel LNombre;
-  private JLabel LAPaterno;
-  private JLabel LAMaterno;
-  private JLabel LSexo;
-  private JLabel LFechaNac;
-  private JLabel LDireccion;
-  private JLabel LOcupacion;
-  private JTextField TNombre;
-  private JTextField TAPaterno;
-  private JTextField TAMaterno;
-  private JTextField TDireccion;
+  public JLabel LNombre;
+  public JLabel LAPaterno;
+  public JLabel LAMaterno;
+  public JLabel LSexo;
+  public JLabel LFechaNac;
+  public JLabel LDireccion;
+  public JLabel LOcupacion;
+  public JTextField TNombre;
+  public JTextField TAPaterno;
+  public JTextField TAMaterno;
+  public JTextField TDireccion;
+  public JDateChooser dateChooser;
 
-  private Container cp;
+  public Container cp;
 
 
 
@@ -26,7 +30,7 @@ public class PagIngEmpleado extends JFrame
   {
     super("Dar de alta un empleado00");
     setSize(1000,500);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setResizable(true);
 
 
@@ -87,6 +91,12 @@ public class PagIngEmpleado extends JFrame
     DOcupacion.setBounds(450,290,200,25);
     menuPrincipal.add(DOcupacion);
 
+    
+    dateChooser = new JDateChooser("yyyy-MM-dd","####-##-##",'_');
+    dateChooser.setBounds(450,210,200,25);
+    menuPrincipal.add(dateChooser);
+    //para consultas del datechooser
+    //http://datojava.blogspot.com/2015/11/jcalendarJavaSwingEjemploTutorial.html#ejemploJDateChooser
 
     cp = getContentPane();
     cp.add(menuPrincipal);
