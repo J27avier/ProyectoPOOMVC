@@ -26,7 +26,7 @@ public class ContPagPrincipal implements ActionListener
 	{
 		if(evento.getSource()==pPrincipal.Opcion2){
 			PagBusEmpleado pBusEmp = new PagBusEmpleado();
-			//Controlador
+			ContBusEmpleado cBusE = new ContBusEmpleado(pBusEmp, conn);
 			pBusEmp.setVisible(true);
 			
 		}

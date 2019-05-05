@@ -6,12 +6,12 @@ import java.awt.event.*;
 
 public class PagIngCita extends JFrame
 {
-  private JButton Opcion1;
-  private JButton Opcion2;
-  private JButton Opcion3;
-  private JButton Opcion4;
-  private JButton Opcion5;
-  private JButton Opcion6;
+  public JButton Ingresar;
+  public JTextField tNombreD;
+  public JTextField tApaternoD;
+  public JTextField tAmaternoD;
+  
+
   private Container cp;
 
   private JLabel Menu;
@@ -19,7 +19,7 @@ public class PagIngCita extends JFrame
 
   PagIngCita()
   {
-    super("Ing cita");
+    super("Agendar cita");
     setSize(1000,500);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setResizable(true);

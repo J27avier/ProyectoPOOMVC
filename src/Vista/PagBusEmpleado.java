@@ -19,7 +19,7 @@ public class PagBusEmpleado extends JFrame
 	public JPanel pDir;
 	public JPanel pOcupacion;
 
-	private Container cp;
+	public Container cp;
 
 
 	/*
@@ -59,9 +59,9 @@ public class PagBusEmpleado extends JFrame
 		pAmaterno.setLayout(new FlowLayout());
 		JPanel pBuscar = new JPanel();
 		pBuscar.setLayout(new FlowLayout());
-		JTextField tNombre = new JTextField(32);
-		JTextField tApaterno = new JTextField(32);
-		JTextField tAmaterno = new JTextField(32);
+		tNombre = new JTextField(16);
+		tApaterno = new JTextField(16);
+		tAmaterno = new JTextField(16);
 		
 		JLabel lNombre = new JLabel("Nombre: ");
 		JLabel lApaterno = new JLabel("Apellido paterno: ");
@@ -101,9 +101,9 @@ public class PagBusEmpleado extends JFrame
 		pSexo.add(lSexo);
 		pDOB.add(new JLabel("Fecha de nacimiento: "));
 		pDOB.add(lDOB);
-		pDir.add(new JLabel("Direccion"));
+		pDir.add(new JLabel("Direccion: "));
 		pDir.add(lDir);
-		pOcupacion.add(new JLabel("Ocupacion"));
+		pOcupacion.add(new JLabel("Ocupacion: "));
 		pOcupacion.add(lOcupacion);
 		pResultado.add(pSexo);
 		pResultado.add(pDOB);
