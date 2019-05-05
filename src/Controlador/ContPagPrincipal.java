@@ -50,7 +50,7 @@ public class ContPagPrincipal implements ActionListener
 		}
 		if(evento.getSource()==pPrincipal.Opcion6){
 			Vista.PagIngCita pIngCit = new Vista.PagIngCita();
-			// Controlador
+			ContIngCita cIngC = new ContIngCita(pIngCit, conn);
 			pIngCit.setVisible(true);
 		}
 	}
