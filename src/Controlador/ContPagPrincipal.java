@@ -17,9 +17,12 @@ public class ContPagPrincipal implements ActionListener
 	public ContPagPrincipal(Vista.PagPrincipal pPrincipal, Connection conn){
 		this.pPrincipal = pPrincipal;
 		this.conn = conn;
+		this.pPrincipal.Opcion1.addActionListener(this);
 		this.pPrincipal.Opcion2.addActionListener(this);
+		this.pPrincipal.Opcion3.addActionListener(this);
 		this.pPrincipal.Opcion4.addActionListener(this);
 		this.pPrincipal.Opcion5.addActionListener(this);
+		this.pPrincipal.Opcion6.addActionListener(this);
 	}
 
 	public void actionPerformed(ActionEvent evento)
@@ -44,6 +47,11 @@ public class ContPagPrincipal implements ActionListener
 			pIngEmp.setVisible(true);
 			//Mandarle pIngEmp y conn a controlador ing empleado
 			
+		}
+		if(evento.getSource()==pPrincipal.Opcion6){
+			Vista.PagIngCita pIngCit = new Vista.PagIngCita();
+			// Controlador
+			pIngCit.setVisible(true);
 		}
 	}
 }//manejador

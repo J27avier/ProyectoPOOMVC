@@ -2,9 +2,7 @@ package Vista;
 
 import java.awt.*;
 import javax.swing.*;
-
 import com.toedter.calendar.JDateChooser;
-
 import java.awt.event.*;
 
 public class PagIngEmpleado extends JFrame
