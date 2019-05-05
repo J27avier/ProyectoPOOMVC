@@ -6,55 +6,52 @@ import java.awt.event.*;
 
 public class PagBusCita extends JFrame
 {
-  private JButton Opcion1;
-  private JButton Opcion2;
-  private JButton Opcion3;
-  private JButton Opcion4;
-  private JButton Opcion5;
-  private JButton Opcion6;
-  private Container cp;
+	public JTextField tNombre;
+	public JTextField tApaterno;
+	public JTextField tAmaterno;
+	public JButton Buscar;
+	public JPanel pRes;
+	public Container cp;
 
-  private JLabel Menu;
+	public PagBusCita()
+	{
+		super("Buscar citas por medico");
+		setSize(1000,500);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setResizable(true);
+		
+		JPanel pDatos = new JPanel();
+		pDatos.setLayout(new GridLayout(3,1));
+		
+		tNombre = new JTextField(16);
+		tApaterno = new JTextField(16);
+		tAmaterno = new JTextField(16);
+		
+		JPanel pParams = new JPanel();
+		pParams.setLayout(new FlowLayout());
+		
+		pParams.add(new JLabel("   Nombre: "));
+		pParams.add(tNombre);
+		pParams.add(new JLabel("   Apellido paterno: "));
+		pParams.add(tApaterno);
+		pParams.add(new JLabel("   Apellido materno: "));
+		pParams.add(tAmaterno);
+		
+		Buscar = new JButton("Buscar");
+		JPanel pBuscar = new JPanel();
+		pBuscar.setLayout(new FlowLayout());
+		pBuscar.add(Buscar);
+		
+		pDatos.add(new JLabel("               Medico: "));
+		pDatos.add(pParams);
+		pDatos.add(pBuscar);
+		
+		pRes = new JPanel();
+		pRes.setLayout(new FlowLayout());
+		cp = getContentPane();
+		cp.setLayout(new GridLayout(2,1));
+		cp.add(pDatos);
+		cp.add(pRes);
 
-
-  PagBusCita()
-  {
-    super("Dar de alta un empleado");
-    setSize(1000,500);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setResizable(true);
-
-
-    JPanel menuPrincipal = new JPanel();
-    menuPrincipal.setLayout(null);
-
-    Opcion1 = new JButton("Buscar paciente");
-    Opcion1.setBounds(400,50,200,25);
-    menuPrincipal.add(Opcion1);
-
-    Opcion2 = new JButton("Buscar empleado");
-    Opcion2.setBounds(400,90,200,25);
-    menuPrincipal.add(Opcion2);
-
-    Opcion3 = new JButton("Buscar cita");
-    Opcion3.setBounds(400,130,200,25);
-    menuPrincipal.add(Opcion3);
-
-    Opcion4 = new JButton("Ingresar paciente nuevo");
-    Opcion4.setBounds(400,170,200,25);
-    menuPrincipal.add(Opcion4);
-
-    Opcion5 = new JButton("Ingresar empleado");
-    Opcion5.setBounds(400,210,200,25);
-    menuPrincipal.add(Opcion5);
-
-    Opcion6 = new JButton("Agendar cita");
-    Opcion6.setBounds(400,250,200,25);
-    menuPrincipal.add(Opcion6);
-
-    cp = getContentPane();
-    cp.add(menuPrincipal);
-    
-
-  }
+	}
 }

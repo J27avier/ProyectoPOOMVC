@@ -33,6 +33,11 @@ public class ContPagPrincipal implements ActionListener
 			pBusEmp.setVisible(true);
 			
 		}
+		if(evento.getSource()==pPrincipal.Opcion3){
+			PagBusCita pBusCit = new PagBusCita();
+			ContBusCita cBusCit = new ContBusCita(pBusCit, conn);
+			pBusCit.setVisible(true);
+		}
 		if(evento.getSource()==pPrincipal.Opcion4)
 		{
 			//Crear controlador Ing paciente
