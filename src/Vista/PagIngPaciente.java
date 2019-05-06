@@ -834,7 +834,7 @@ p4.add(RBF7_5);
 		p5.add(RBG2_2);
 		p5.add(RBG2_3);
 		
-		LG3 = new JLabel("Insuficiencia vascular periferica (Varices, vasos sanguineos obstruidos");
+		LG3 = new JLabel("Insuficiencia vascular periferica (Varices, vasos sanguineos obstruidos)");
 		p5.add(LG3);
 		RBG3_1 = new JRadioButton("0.No");
 		RBG3_2 = new JRadioButton("1.Si");
@@ -1102,7 +1102,7 @@ p4.add(RBF7_5);
 		p6.add(TAMaterno_1);
 		
 		pestana.addTab("Paciente", p1);
-		pestana.addTab("Tencion", p2);
+		pestana.addTab("Tension", p2);
 		pestana.addTab("Trastornos", p3);
 		pestana.addTab("Emocional", p4);
 		pestana.addTab("Comorbilidad", scroll);
