@@ -798,71 +798,264 @@ p4.add(RBF7_4);
 p4.add(RBF7_5);
 
 		
-		
-/////////Pestana 5/////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+////////////PESTANIA 5 ////////////////
+///////////////////////////////////////
 		JPanel p5=new JPanel();
-		p5.setLayout(null);
+		p5.setLayout(new BoxLayout(p5,BoxLayout.Y_AXIS));
 		
 
 		
 		LG1= new JLabel("Cardiopatia isquemico (Angina de pecho, preinfarto, infarto)");
 		p5.add(LG1);
+		RBG1_1 = new JRadioButton("0.No");
+		RBG1_2 = new JRadioButton("1.Si");
+		RBG1_3 = new JRadioButton("-1. NS/NR");
+		BGG1 = new ButtonGroup();
+		BGG1.add(RBG1_1);
+		BGG1.add(RBG1_2);
+		BGG1.add(RBG1_3);
+		p5.add(RBG1_1);
+		p5.add(RBG1_2);
+		p5.add(RBG1_3);
+		
 		
 		LG2 = new JLabel("Insuficiencia cardiaca congestiva (agua en el pulmon, no bombea suficiente agua)");
 		p5.add(LG2);
+		RBG2_1 = new JRadioButton("0.No");
+		RBG2_2 = new JRadioButton("1.Si");
+		RBG2_3 = new JRadioButton("-1. NS/NR");
+		BGG2 = new ButtonGroup();
+		BGG2.add(RBG2_1);
+		BGG2.add(RBG2_2);
+		BGG2.add(RBG2_3);
+		p5.add(RBG2_1);
+		p5.add(RBG2_2);
+		p5.add(RBG2_3);
 		
 		LG3 = new JLabel("Insuficiencia vascular periferica (Varices, vasos sanguineos obstruidos");
 		p5.add(LG3);
+		RBG3_1 = new JRadioButton("0.No");
+		RBG3_2 = new JRadioButton("1.Si");
+		RBG3_3 = new JRadioButton("-1. NS/NR");
+		BGG3 = new ButtonGroup();
+		BGG3.add(RBG3_1);
+		BGG3.add(RBG3_2);
+		BGG3.add(RBG3_3);
+		p5.add(RBG3_1);
+		p5.add(RBG3_2);
+		p5.add(RBG3_3);
 		
 		LG4 = new JLabel("Enfermedad vascular cerebral (Embolia, derrame o infarto cerebral)");
 		p5.add(LG4);
+		RBG4_1 = new JRadioButton("0.No");
+		RBG4_2 = new JRadioButton("1.Si");
+		RBG4_3 = new JRadioButton("-1. NS/NR");
+		BGG4 = new ButtonGroup();
+		BGG4.add(RBG4_1);
+		BGG4.add(RBG4_2);
+		BGG4.add(RBG4_3);
+		p5.add(RBG4_1);
+		p5.add(RBG4_2);
+		p5.add(RBG4_3);
 		
 		LG5 = new JLabel("Demencia (Alzheimer)");
 		p5.add(LG5);
+		RBG5_1 = new JRadioButton("0.No");
+		RBG5_2 = new JRadioButton("1.Si");
+		RBG5_3 = new JRadioButton("-1. NS/NR");
+		BGG5 = new ButtonGroup();
+		BGG5.add(RBG5_1);
+		BGG5.add(RBG5_2);
+		BGG5.add(RBG5_3);
+		p5.add(RBG5_1);
+		p5.add(RBG5_2);
+		p5.add(RBG5_3);
 		
 		LG6 = new JLabel("Enfisema o bronquitis cronica (EPOC)");
 		p5.add(LG6);
+		RBG6_1 = new JRadioButton("0.No");
+		RBG6_2 = new JRadioButton("1.Si");
+		RBG6_3 = new JRadioButton("-1. NS/NR");
+		BGG6 = new ButtonGroup();
+		BGG6.add(RBG6_1);
+		BGG6.add(RBG6_2);
+		BGG6.add(RBG6_3);
+		p5.add(RBG6_1);
+		p5.add(RBG6_2);
+		p5.add(RBG6_3);
 		
 		LG7 = new JLabel("Artritis reumatoide o lupus");
 		p5.add(LG7);
+		RBG7_1 = new JRadioButton("0.No");
+		RBG7_2 = new JRadioButton("1.Si");
+		RBG7_3 = new JRadioButton("-1. NS/NR");
+		BGG7 = new ButtonGroup();
+		BGG7.add(RBG7_1);
+		BGG7.add(RBG7_2);
+		BGG7.add(RBG7_3);
+		p5.add(RBG7_1);
+		p5.add(RBG7_2);
+		p5.add(RBG7_3);
 		
 		LG8= new JLabel("Gastritis o ulcera gastrica");
 		p5.add(LG8);
+		RBG8_1 = new JRadioButton("0.No");
+		RBG8_2 = new JRadioButton("1.Si");
+		RBG8_3 = new JRadioButton("-1. NS/NR");
+		BGG8 = new ButtonGroup();
+		BGG8.add(RBG8_1);
+		BGG8.add(RBG8_2);
+		BGG8.add(RBG8_3);
+		p5.add(RBG8_1);
+		p5.add(RBG8_2);
+		p5.add(RBG8_3);
 		
 		LG9 = new JLabel("Enfermedad hepatica leve (Cirrosis sin hipertension portal)");
 		p5.add(LG9);
+		RBG9_1 = new JRadioButton("0.No");
+		RBG9_2 = new JRadioButton("1.Si");
+		RBG9_3 = new JRadioButton("-1. NS/NR");
+		BGG9 = new ButtonGroup();
+		BGG9.add(RBG9_1);
+		BGG9.add(RBG9_2);
+		BGG9.add(RBG9_3);
+		p5.add(RBG9_1);
+		p5.add(RBG9_2);
+		p5.add(RBG9_3);
 		
 		LG10 = new JLabel("Diabetes sin complicaciones");
 		p5.add(LG10);
+		RBG10_1 = new JRadioButton("0.No");
+		RBG10_2 = new JRadioButton("1.Si");
+		RBG10_3 = new JRadioButton("-1. NS/NR");
+		BGG10 = new ButtonGroup();
+		BGG10.add(RBG10_1);
+		BGG10.add(RBG10_2);
+		BGG10.add(RBG10_3);
+		p5.add(RBG10_1);
+		p5.add(RBG10_2);
+		p5.add(RBG10_3);
 		
 		LG11 = new JLabel("Diabetes con complicaciones (Retinopatia, enfermedad renal, amputacion)");
 		p5.add(LG11);
+		RBG11_1 = new JRadioButton("0.No");
+		RBG11_2 = new JRadioButton("1.Si");
+		RBG11_3 = new JRadioButton("-1. NS/NR");
+		BGG11 = new ButtonGroup();
+		BGG11.add(RBG11_1);
+		BGG11.add(RBG11_2);
+		BGG11.add(RBG11_3);
+		p5.add(RBG11_1);
+		p5.add(RBG11_2);
+		p5.add(RBG11_3);
 		
 		LG12 = new JLabel("Hemiplejia (paralisis parcial)");
 		p5.add(LG12);
+		RBG12_1 = new JRadioButton("0.No");
+		RBG12_2 = new JRadioButton("1.Si");
+		RBG12_3 = new JRadioButton("-1. NS/NR");
+		BGG12 = new ButtonGroup();
+		BGG12.add(RBG12_1);
+		BGG12.add(RBG12_2);
+		BGG12.add(RBG12_3);
+		p5.add(RBG12_1);
+		p5.add(RBG12_2);
+		p5.add(RBG12_3);
 		
 		LG13 = new JLabel("Insuficiencia rena terminal con sustitucion (dialisis peritoneal o hemodialisis");
 		p5.add(LG13);
+		RBG13_1 = new JRadioButton("0.No");
+		RBG13_2 = new JRadioButton("1.Si");
+		RBG13_3 = new JRadioButton("-1. NS/NR");
+		BGG13 = new ButtonGroup();
+		BGG13.add(RBG13_1);
+		BGG13.add(RBG13_2);
+		BGG13.add(RBG13_3);
+		p5.add(RBG13_1);
+		p5.add(RBG13_2);
+		p5.add(RBG13_3);
 		
 		LG14 = new JLabel("Cancer sin metastasis");
 		p5.add(LG14);
+		RBG14_1 = new JRadioButton("0.No");
+		RBG14_2 = new JRadioButton("1.Si");
+		RBG14_3 = new JRadioButton("-1. NS/NR");
+		BGG14 = new ButtonGroup();
+		BGG14.add(RBG14_1);
+		BGG14.add(RBG14_2);
+		BGG14.add(RBG14_3);
+		p5.add(RBG14_1);
+		p5.add(RBG14_2);
+		p5.add(RBG14_3);
 		
 		LG15 = new JLabel("Leucemia");
 		p5.add(LG15);
+		RBG15_1 = new JRadioButton("0.No");
+		RBG15_2 = new JRadioButton("1.Si");
+		RBG15_3 = new JRadioButton("-1. NS/NR");
+		BGG15 = new ButtonGroup();
+		BGG15.add(RBG15_1);
+		BGG15.add(RBG15_2);
+		BGG15.add(RBG15_3);
+		p5.add(RBG15_1);
+		p5.add(RBG15_2);
+		p5.add(RBG15_3);
 		
 		LG16 = new JLabel("Linfoma");
 		p5.add(LG16);
+		RBG16_1 = new JRadioButton("0.No");
+		RBG16_2 = new JRadioButton("1.Si");
+		RBG16_3 = new JRadioButton("-1. NS/NR");
+		BGG16 = new ButtonGroup();
+		BGG16.add(RBG16_1);
+		BGG16.add(RBG16_2);
+		BGG16.add(RBG16_3);
+		p5.add(RBG16_1);
+		p5.add(RBG16_2);
+		p5.add(RBG16_3);
 		
 		LG17 = new JLabel("Enfermedad hepatica moderada o severa (Cirrosis con hipertension portal, enfermedad del higado)");
 		p5.add(LG17);
+		RBG17_1 = new JRadioButton("0.No");
+		RBG17_2 = new JRadioButton("1.Si");
+		RBG17_3 = new JRadioButton("-1. NS/NR");
+		BGG17 = new ButtonGroup();
+		BGG17.add(RBG17_1);
+		BGG17.add(RBG17_2);
+		BGG17.add(RBG17_3);
+		p5.add(RBG17_1);
+		p5.add(RBG17_2);
+		p5.add(RBG17_3);
 		
 		LG18 = new JLabel("SIDA/VIH");
 		p5.add(LG18);
+		RBG18_1 = new JRadioButton("0.No");
+		RBG18_2 = new JRadioButton("1.Si");
+		RBG18_3 = new JRadioButton("-1. NS/NR");
+		BGG18 = new ButtonGroup();
+		BGG18.add(RBG18_1);
+		BGG18.add(RBG18_2);
+		BGG18.add(RBG18_3);
+		p5.add(RBG18_1);
+		p5.add(RBG18_2);
+		p5.add(RBG18_3);
 		
 		LG19 = new JLabel("Cancer con metastasis");
 		p5.add(LG19);
+		RBG18_1 = new JRadioButton("0.No");
+		RBG18_2 = new JRadioButton("1.Si");
+		RBG18_3 = new JRadioButton("-1. NS/NR");
+		BGG18 = new ButtonGroup();
+		BGG18.add(RBG18_1);
+		BGG18.add(RBG18_2);
+		BGG18.add(RBG18_3);
+		p5.add(RBG18_1);
+		p5.add(RBG18_2);
+		p5.add(RBG18_3);
 		
-		//JScrollPane scroll = new JScrollPane();
+		JScrollPane scroll = new JScrollPane(p5);
 		//scroll.add(p5);
 		//scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		//JPanel p5_1 = new JPanel();
@@ -871,7 +1064,10 @@ p4.add(RBF7_5);
 		//jf.add(scroll,BorderLayout.CENTER);
 		///p5_1.add(scroll,BorderLayout.CENTER);
 		
-//////////////////Pestania 6/////////////////////777
+///////////////////////////////////////
+///////////////////////////////////////
+////////////PESTANIA 6 ////////////////
+///////////////////////////////////////
 		JPanel p6 = new JPanel();
 		p6.setLayout(null);
 		
@@ -909,7 +1105,7 @@ p4.add(RBF7_5);
 		pestana.addTab("Tencion", p2);
 		pestana.addTab("Trastornos", p3);
 		pestana.addTab("Emocional", p4);
-		pestana.addTab("Comorbilidad", p5);
+		pestana.addTab("Comorbilidad", scroll);
 		pestana.addTab("Empleado",p6);
 		//pestana para empleado (agregar)
 		//Boton de ingresar (poner)
