@@ -2,55 +2,78 @@ package Vista;
 
 import java.awt.*;
 import javax.swing.*;
+
+import com.toedter.calendar.JDateChooser;
+
 import java.awt.event.*;
 
 public class PagBusPaciente extends JFrame
 {
-  private JButton Opcion1;
-  private JButton Opcion2;
-  private JButton Opcion3;
-  private JButton Opcion4;
-  private JButton Opcion5;
-  private JButton Opcion6;
+  public JLabel LB1_1_1;
+  public JLabel LB1_2_1;
+  public JLabel LB1_3_1;
+  public JLabel LB3_1;
+  
+  public JTextField TB1_1_1;
+  public JTextField TB1_2_1;
+  public JTextField TB1_3_1;
+  
+  public JDateChooser DCB3_1;
+  
+  public JButton Buscar1;
+  
   private Container cp;
 
-  private JLabel Menu;
 
 
-  PagBusPaciente()
+  public PagBusPaciente()
   {
     super("Buscar Paciente");
     setSize(1000,500);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setResizable(true);
 
 
     JPanel menuPrincipal = new JPanel();
     menuPrincipal.setLayout(null);
 
-    Opcion1 = new JButton("Buscar paciente");
-    Opcion1.setBounds(400,50,200,25);
-    menuPrincipal.add(Opcion1);
+    LB1_1_1 = new JLabel("Nombre(s) del paciente:");
+    LB1_1_1.setBounds(30,10,200,25);
+    menuPrincipal.add(LB1_1_1);
+    
+    LB1_2_1 = new JLabel("Apellido paterno:");
+    LB1_2_1.setBounds(30,40,200,25);
+    menuPrincipal.add(LB1_2_1);
 
-    Opcion2 = new JButton("Buscar empleado");
-    Opcion2.setBounds(400,90,200,25);
-    menuPrincipal.add(Opcion2);
+    LB1_3_1 = new JLabel("Apellido materno:");
+    LB1_3_1.setBounds(30,70,200,25);
+    menuPrincipal.add(LB1_3_1);
+    
+    LB3_1 = new JLabel("Fecha de nacimiento:");
+    LB3_1.setBounds(30,100,200,25);
+    menuPrincipal.add(LB3_1);
+    
+    TB1_1_1 = new JTextField();
+    TB1_1_1.setBounds(250,10,200,25);
+    menuPrincipal.add(TB1_1_1);
+    
+    TB1_2_1 = new JTextField();
+    TB1_2_1.setBounds(250,40,200,25);
+    menuPrincipal.add(TB1_2_1);
+    
+    TB1_3_1 = new JTextField();
+    TB1_3_1.setBounds(250,70,200,25);
+    menuPrincipal.add(TB1_3_1);
+    
+    DCB3_1 = new JDateChooser("yyyy-MM-dd","####-##-##",'_');
+    DCB3_1.setBounds(250,100,200,25);
+    menuPrincipal.add(DCB3_1);
+    
+    Buscar1 = new JButton("Buscar");
+    Buscar1.setBounds(250,130,100,25);
+    menuPrincipal.add(Buscar1);
+    
 
-    Opcion3 = new JButton("Buscar cita");
-    Opcion3.setBounds(400,130,200,25);
-    menuPrincipal.add(Opcion3);
-
-    Opcion4 = new JButton("Ingresar paciente nuevo");
-    Opcion4.setBounds(400,170,200,25);
-    menuPrincipal.add(Opcion4);
-
-    Opcion5 = new JButton("Ingresar empleado");
-    Opcion5.setBounds(400,210,200,25);
-    menuPrincipal.add(Opcion5);
-
-    Opcion6 = new JButton("Agendar cita");
-    Opcion6.setBounds(400,250,200,25);
-    menuPrincipal.add(Opcion6);
 
     cp = getContentPane();
     cp.add(menuPrincipal);
