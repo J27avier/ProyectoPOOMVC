@@ -25,7 +25,7 @@ public class ContBusEmpleado implements ActionListener{
 			Buscar bus = new Buscar(conn);
 			Empleado emp = new Empleado();
 			String[] paramsE = new String[3];
-			int flag = 1;
+			int flag = 1; //Para ver si todos los campos han sido llenados correctamente
 			//Validar nombre
 			try{
 				String temp = pBusE.tNombre.getText();
@@ -48,6 +48,7 @@ public class ContBusEmpleado implements ActionListener{
 				pBusE.tApaterno.setText("");
 				JOptionPane.showMessageDialog(pBusE, "Favor de ingresar apellido paterno valido");
 			}
+			//Validar Apellido materno
 			try{
 				String temp = pBusE.tAmaterno.getText().toString();
 				if(!temp.matches("^[a-zA-Z]+$"))

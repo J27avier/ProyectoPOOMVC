@@ -21,7 +21,7 @@ public class PagBusEmpleado extends JFrame
 
 	public Container cp;
 
-
+//Para solo insertar numeros
 	/*
  public static void main(String[] args) {
     NumberFormat format = NumberFormat.getInstance();

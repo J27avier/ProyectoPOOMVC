@@ -1,3 +1,4 @@
+//Conecta a la base de datos para poder hacer queries
 package Modelo;
 
 import java.sql.Connection;

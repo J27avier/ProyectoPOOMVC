@@ -1,6 +1,10 @@
-// Busca a renglones de la base de datos
-// Si una objeto no se encuetra, se regresa con id = -1
-
+/* Busca a un renglon en especifico de la tabla de 
+ * datos y lo regresa como un objeto con cada uno de
+ * sus atributos. Para las citas regresa un 
+ * array list de citas.
+ * Contiene los queries y se conecta a la base de datos
+ * Si una objeto no se encuetra, se regresa con id = -1
+*/
 package Modelo;
 
 import java.sql.Connection;
@@ -16,6 +20,7 @@ public class Buscar{
 		this.conn = conn;
 	}
 	
+	//Busca un empleado a partir de su nombre, apaterno y amaterno
 	public Empleado bEmpleado(String[] paramsE){
 		Empleado emp = new Empleado();
 		emp.setId_empleado(-1);
@@ -41,6 +46,8 @@ public class Buscar{
 		}
 		return emp;
 	}
+	
+	//Busca un empleado a partir de su id_empleado
 	public Empleado bEmpleado(int id_e){
 		Empleado emp = new Empleado();
 		emp.setId_empleado(-1);
@@ -63,6 +70,8 @@ public class Buscar{
 		}
 		return emp;
 	}
+	
+	//Busca un paciente a partir de su nombre, apaterno y amaterno
 	public Paciente bPaciente(String[] paramsP){
 		Paciente pac = new Paciente();
 		pac.setId_paciente(-1);
@@ -111,6 +120,8 @@ public class Buscar{
 		
 		return pac;
 	}
+	
+	//Busca un paciente a partir de su id_paciente
 	public Paciente bPaciente(int id_p){
 		Paciente pac = new Paciente();
 		pac.setId_paciente(-1);
@@ -158,6 +169,7 @@ public class Buscar{
 		return pac;
 	}
 	
+	//Busca una tension a partir de su id_paciente
 	public Tension bTension(int id_p){
 		Tension ten = new Tension();
 		ten.setId_tension(-1);
@@ -184,6 +196,8 @@ public class Buscar{
 		}
 		return ten;
 	}
+	
+	//Busca trastornos a partir de un id_paciente
 	public Trastornos bTrastornos(int id_p){
 		Trastornos tra = new Trastornos();
 		tra.setId_trastorno(-1);
@@ -206,6 +220,8 @@ public class Buscar{
 		
 		return tra;
 	}
+	
+	//Busca emocional a partir de id_paciente
 	public Emocional bEmocional(int id_p){
 		Emocional emo = new Emocional();
 		emo.setId_emocional(-1);
@@ -231,6 +247,8 @@ public class Buscar{
 		}
 		return emo;
 	}
+	
+	//Busca comorbilidad a partir de id_paciente
 	public Comorbilidad bComorbilidad(int id_p){
 
 		Comorbilidad com = new Comorbilidad();
@@ -307,10 +325,12 @@ public class Buscar{
 		}
 		return com;
 	}
+	
+	//Busca las citas relacionadas con el empleado: nombre, apaterno, amaterno
 	public ArrayList<Cita> bCita(String[] paramsE){
 		ArrayList<Cita> citArr = new ArrayList<Cita>();
 		Empleado emp = new Empleado();
-		emp = bEmpleado(paramsE); // A ver si no sale un error raro
+		emp = bEmpleado(paramsE); 
 		
 		try {
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM CITA WHERE id_empleado = ?");

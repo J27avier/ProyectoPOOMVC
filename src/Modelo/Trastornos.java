@@ -1,3 +1,4 @@
+//Modelo de la tabla trastornos
 package Modelo;
 
 public class Trastornos {

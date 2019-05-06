@@ -224,6 +224,7 @@ public class Insertar {
 		return 1;
 	}
 	
+	//Inserta una cita
 	public int iCita(Cita cit){
 		try {
 			PreparedStatement stmt = conn.prepareStatement("INSERT INTO Cita (id_empleado, id_paciente, Fecha) VALUES (?, ?, ?)");
@@ -238,6 +239,8 @@ public class Insertar {
 		}
 		return 1;
 	}
+	
+	//Inserta una cita usando el id_empleado de emp y el id_paciente de pac
 	public int iCita(Empleado emp, Paciente pac, Cita cit){
 		cit.setId_empleado(emp.getId_empleado());
 		cit.setId_paciente(pac.getId_paciente());

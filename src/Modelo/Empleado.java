@@ -1,4 +1,5 @@
- package Modelo;
+//Modelo de la tabla empleado
+package Modelo;
 
 import java.sql.Date;
 

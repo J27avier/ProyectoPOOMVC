@@ -1,3 +1,4 @@
+//Modelo de la tabla paciente
 package Modelo;
 
 import java.sql.Date;

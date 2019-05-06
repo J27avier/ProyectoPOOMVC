@@ -1,3 +1,9 @@
+/*
+ * Proyecto final de Programacion Orientada a Objetos
+ * Javier Sales y Alejandro Zepeda
+ * Primavera 2019
+ * Universidad Iberoamericana
+ * */
 package PruebaMVC;
 
 import Modelo.*;

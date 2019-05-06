@@ -1,3 +1,4 @@
+//Modelo de la tabla cita
 package Modelo;
 
 

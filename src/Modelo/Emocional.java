@@ -1,3 +1,4 @@
+//Modelo de la tabla emocional
 package Modelo;
 
 public class Emocional {

@@ -1,3 +1,4 @@
+//Modelo de la tabla comorbilidad
 package Modelo;
 
 public class Comorbilidad {

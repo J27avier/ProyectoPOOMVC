@@ -1,3 +1,4 @@
+//Modelo de la tabla tension
 package Modelo;
 
 public class Tension {

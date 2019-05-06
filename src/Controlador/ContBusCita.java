@@ -1,3 +1,5 @@
+/*
+ * Busca cita y regresa un arraylist y lo pone en una jtable*/
 package Controlador;
 
 import java.awt.event.ActionEvent;

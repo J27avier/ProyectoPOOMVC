@@ -1,3 +1,5 @@
+//Ejemplos en codigo de todas las funciones de modelo
+//Puede usarse para poblar a la base de datos
 package PruebaMVC;
 
 import java.sql.Date;
