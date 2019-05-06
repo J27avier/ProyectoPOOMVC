@@ -15,6 +15,8 @@ public class PagIngCita extends JFrame
   public JTextField tApaternoD;
   public JTextField tAmaternoD;
   public JDateChooser dateChooser;
+  public final JComboBox<String> Dhora;
+  public final JComboBox<String> Dminuto;
   private Container cp;
 
 
@@ -53,11 +55,20 @@ public class PagIngCita extends JFrame
     pDoctor.add(tAmaternoD);
     
     dateChooser = new JDateChooser("yyyy-MM-dd","####-##-##", '_');
+    String[] opcionesHora = {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"};
+    Dhora = new JComboBox<String>(opcionesHora);
+    
+    String[] opcionesMinuto = {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"};
+    Dminuto = new JComboBox<String>(opcionesMinuto);
     
     JPanel pFecha= new JPanel();
     pFecha.setLayout(new FlowLayout());
     pFecha.add(new JLabel("Fecha: "));
     pFecha.add(dateChooser);
+    pFecha.add(new JLabel("      Hora: "));
+    pFecha.add(Dhora);
+    pFecha.add(new JLabel(" : "));
+    pFecha.add(Dminuto);
     
     Ingresar = new JButton("Ingresar");
     

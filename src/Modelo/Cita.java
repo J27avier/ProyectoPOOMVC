@@ -1,16 +1,15 @@
 package Modelo;
 
-import java.sql.Date;
 
 public class Cita {
 	private int id_cita;
 	private int id_empleado;
 	private int id_paciente;
-	private Date Fecha;
+	private String Fecha; //DATETIME
 	
 	public Cita(){}
 
-	public Cita(int id_empleado, int id_paciente, Date fecha) {
+	public Cita(int id_empleado, int id_paciente, String fecha) {
 		this.id_empleado = id_empleado;
 		this.id_paciente = id_paciente;
 		Fecha = fecha;
@@ -46,11 +45,11 @@ public class Cita {
 		this.id_paciente = id_paciente;
 	}
 
-	public Date getFecha() {
+	public String getFecha() {
 		return Fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		Fecha = fecha;
 	}
 	

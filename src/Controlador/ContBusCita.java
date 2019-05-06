@@ -2,7 +2,6 @@ package Controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Date;
 
 import Vista.*;
 import Modelo.*;
@@ -28,7 +27,6 @@ public class ContBusCita implements ActionListener{
 	public void actionPerformed(ActionEvent evento) {
 		if(evento.getSource() == pBusC.Buscar){
 			Empleado emp = new Empleado();
-			Paciente pac = new Paciente();
 			ArrayList<Cita> citArr = new ArrayList<Cita>();
 			Buscar bus = new Buscar(conn);
 			String[] paramsE = new String[3];

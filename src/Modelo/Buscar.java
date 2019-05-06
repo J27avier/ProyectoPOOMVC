@@ -321,7 +321,7 @@ public class Buscar{
 				citaTemp.setId_cita(rs.getInt("id_cita"));
 				citaTemp.setId_empleado(rs.getInt("id_empleado"));
 				citaTemp.setId_paciente(rs.getInt("id_paciente"));
-				citaTemp.setFecha(rs.getDate("Fecha"));
+				citaTemp.setFecha(rs.getString("Fecha"));
 				citArr.add(citaTemp);
 				
 			}

@@ -1,7 +1,7 @@
 package Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Date;
+
 
 import Vista.*;
 import Modelo.*;
@@ -96,8 +96,13 @@ public class ContIngCita implements ActionListener{
 				JOptionPane.showMessageDialog(pIngC, "Favor de ingresar a. materno del medico valido"); //
 			}
 			if(pIngC.dateChooser.getDate() != null){
-				String Fecha = String.format("%d-%d-%d", (1900 + pIngC.dateChooser.getDate().getYear()), (pIngC.dateChooser.getDate().getMonth()+1), pIngC.dateChooser.getDate().getDate());
-				cit.setFecha(java.sql.Date.valueOf(Fecha));
+				String Fecha = String.format("%d-%d-%d %s:%s:%s", (1900 + pIngC.dateChooser.getDate().getYear()), 
+						(pIngC.dateChooser.getDate().getMonth()+1), pIngC.dateChooser.getDate().getDate(), 
+						pIngC.Dhora.getSelectedItem().toString(), 
+						pIngC.Dminuto.getSelectedItem().toString(), "00");
+				
+				//Agregar hora y min
+				cit.setFecha(Fecha);
 			}else{
 				flag = 0;
 				JOptionPane.showMessageDialog(pIngC, "Favor de ingresar una fecha");
