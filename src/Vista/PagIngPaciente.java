@@ -150,13 +150,22 @@ public class PagIngPaciente extends JFrame
     //variables de pestana 5
 	
 	public JLabel LG1,LG2,LG3,LG4,LG5,LG6,LG7,LG8,LG9,LG10,LG11,LG12,LG13,LG14,LG15,LG16,LG17,LG18,LG19;
-	
+	public JLabel LGTotal,LGTotalResp, LG20,LG21,LG22,LG23,LG24,LG25,LG26;
+	public JLabel Warning,Inicio,LG26_1_1,LG26_1_2,LG26_1_3,LG26_1_4,LG26_2,LG26_2_1,LG26_3,LG26_3_1,LG26_4,LG26_4_1,LG26_5,LG26_5_1,LG26_5_2,LG26_5_3,LG26_5_4,LG26_5_5,LG26_5_5_1,LG26_5__6,LG26_5_6_1,LG26_5_7,LG26_5_7_1,LG26_5_8_1,LG26_5_8_2,LG26_5_8_3,LG26_5_8_4,LG27,LG28,LG29,LG30,LG30_1,LG31,LG31_1;
 	public JRadioButton RBG1_1,RBG1_2,RBG1_3,RBG2_1,RBG2_2,RBG2_3,RBG3_1,RBG3_2,RBG3_3,RBG4_1,RBG4_2,RBG4_3,RBG5_1,RBG5_2,RBG5_3,RBG6_1,RBG6_2,RBG6_3,RBG7_1,RBG7_2,RBG7_3,RBG8_1,RBG8_2,RBG8_3,RBG9_1,RBG9_2,RBG9_3,RBG10_1,RBG10_2,RBG10_3,RBG11_1,RBG11_2,RBG11_3,RBG12_1,RBG12_2,RBG12_3,RBG13_1,RBG13_2,RBG13_3,RBG14_1,RBG14_2,RBG14_3,RBG15_1,RBG15_2,RBG15_3,RBG16_1,RBG16_2,RBG16_3,RBG17_1,RBG17_2,RBG17_3,RBG18_1,RBG18_2,RBG18_3,RBG19_1,RBG19_2,RBG19_3;
+	public JRadioButton RBG20_1,RBG20_2,RBG20_3,RBG21_1,RBG21_2,RBG21_3,RBG22_1,RBG22_2,RBG22_3,RBG23_1,RBG23_2,RBG23_3,RBG24_1,RBG24_2,RBG24_3,RBG25_1,RBG25_2,RBG25_3,RBG26_1,RBG26_2,RBG26_3;
 	
 	public ButtonGroup BGG1,BGG2,BGG3,BGG4,BGG5,BGG6,BGG7,BGG8,BGG9,BGG10,BGG11,BGG12,BGG13,BGG14,BGG15,BGG16,BGG17,BGG18,BGG19;
+	public ButtonGroup BGG20,BGG21,BGG22,BGG23,BGG24,BGG25,BGG26;
 	
 	public JDateChooser dateChooser1;
 	
+	public JTextField TG26_1_1,TG26_1_2,TG26_1_3,TG26_2,TG26_3,TG26_4,TG26_5_1,TG26_5_2,TG26_5_3,TG26_5_5,TG26_5_6,TG26_5_7,TG26_5_8_1,TG26_5_8_2,TG26_5_8_3,TG30,TG30_1,TG31;
+	
+	public JCheckBox CBG26_1_4,CBG26_2_1,CBG26_3_1,CBG26_4_1,CBG26_5_4,CBG26_5_5_1,CBG26_5_6_1,CBG26_5_7_1,CBG26_5_8_4,CBG31_1;
+	
+	public JRadioButton RBG26_5_1,RBG26_5_2,RBG26_5_3,RBG27_1,RBG27_2,RBG27_3,RBG28_1,RBG28_2,RBG28_3,RBG29_1,RBG29_2,RBG29_3;
+	public ButtonGroup BGG26_5,BGG27,BGG28,BGG29;
 	//pestania 6
 	
 	public JButton ingresar1;
@@ -1044,16 +1053,200 @@ p4.add(RBF7_5);
 		
 		LG19 = new JLabel("Cancer con metastasis");
 		p5.add(LG19);
-		RBG18_1 = new JRadioButton("0.No");
-		RBG18_2 = new JRadioButton("1.Si");
-		RBG18_3 = new JRadioButton("-1. NS/NR");
-		BGG18 = new ButtonGroup();
-		BGG18.add(RBG18_1);
-		BGG18.add(RBG18_2);
-		BGG18.add(RBG18_3);
-		p5.add(RBG18_1);
-		p5.add(RBG18_2);
-		p5.add(RBG18_3);
+		RBG19_1 = new JRadioButton("0.No");
+		RBG19_2 = new JRadioButton("1.Si");
+		RBG19_3 = new JRadioButton("-1. NS/NR");
+		BGG19 = new ButtonGroup();
+		BGG19.add(RBG19_1);
+		BGG19.add(RBG19_2);
+		BGG19.add(RBG19_3);
+		p5.add(RBG19_1);
+		p5.add(RBG19_2);
+		p5.add(RBG19_3);
+		
+		LGTotal = new JLabel("Total = ");
+		LGTotal.setForeground(Color.RED);
+		p5.add(LGTotal);
+		
+		LGTotalResp = new JLabel("(respuesta)");
+		LGTotalResp.setForeground(Color.RED);
+		p5.add(LGTotalResp);
+		
+		LG20 = new JLabel("Osteoporosis");
+		p5.add(LG20);
+		RBG20_1 = new JRadioButton("0.No");
+		RBG20_2 = new JRadioButton("1.Si");
+		RBG20_3 = new JRadioButton("-1. NS/NR");
+		BGG20 = new ButtonGroup();
+		BGG20.add(RBG20_1);
+		BGG20.add(RBG20_2);
+		BGG20.add(RBG20_3);
+		p5.add(RBG20_1);
+		p5.add(RBG20_2);
+		p5.add(RBG20_3);
+		
+		LG21 = new JLabel("Osteoartrosis (artrosis)");
+		p5.add(LG21);
+		RBG21_1 = new JRadioButton("0.No");
+		RBG21_2 = new JRadioButton("1.Si");
+		RBG21_3 = new JRadioButton("-1. NS/NR");
+		BGG21 = new ButtonGroup();
+		BGG21.add(RBG21_1);
+		BGG21.add(RBG21_2);
+		BGG21.add(RBG21_3);
+		p5.add(RBG21_1);
+		p5.add(RBG21_2);
+		p5.add(RBG21_3);
+		
+		LG22 = new JLabel("Hipertension arterial sistemica");
+		p5.add(LG22);
+		RBG22_1 = new JRadioButton("0.No");
+		RBG22_2 = new JRadioButton("1.Si");
+		RBG22_3 = new JRadioButton("-1. NS/NR");
+		BGG22 = new ButtonGroup();
+		BGG22.add(RBG22_1);
+		BGG22.add(RBG22_2);
+		BGG22.add(RBG22_3);
+		p5.add(RBG22_1);
+		p5.add(RBG22_2);
+		p5.add(RBG22_3);
+		
+		LG23 = new JLabel("Colesterol Alto");
+		p5.add(LG23);
+		RBG23_1 = new JRadioButton("0.No");
+		RBG23_2 = new JRadioButton("1.Si");
+		RBG23_3 = new JRadioButton("-1. NS/NR");
+		BGG23 = new ButtonGroup();
+		BGG23.add(RBG23_1);
+		BGG23.add(RBG23_2);
+		BGG23.add(RBG23_3);
+		p5.add(RBG23_1);
+		p5.add(RBG23_2);
+		p5.add(RBG23_3);
+		
+		LG24 = new JLabel("Enfermedad arterial periferica");
+		p5.add(LG24);
+		RBG24_1 = new JRadioButton("0.No");
+		RBG24_2 = new JRadioButton("1.Si");
+		RBG24_3 = new JRadioButton("-1. NS/NR");
+		BGG24 = new ButtonGroup();
+		BGG24.add(RBG24_1);
+		BGG24.add(RBG24_2);
+		BGG24.add(RBG24_3);
+		p5.add(RBG24_1);
+		p5.add(RBG24_2);
+		p5.add(RBG24_3);
+		
+		LG25 = new JLabel("Algun tipo de neuropatia");
+		p5.add(LG25);
+		RBG25_1 = new JRadioButton("0.No");
+		RBG25_2 = new JRadioButton("1.Si");
+		RBG25_3 = new JRadioButton("-1. NS/NR");
+		BGG25 = new ButtonGroup();
+		BGG25.add(RBG25_1);
+		BGG25.add(RBG25_2);
+		BGG25.add(RBG25_3);
+		p5.add(RBG25_1);
+		p5.add(RBG25_2);
+		p5.add(RBG25_3);
+		
+		LG26 = new JLabel("Ha padecido alguna vez herpes zoster (culebrilla)");
+		p5.add(LG26);
+		RBG26_1 = new JRadioButton("0.No (pase a J.27)");
+		RBG26_2 = new JRadioButton("1.Si (continue)");
+		RBG26_3 = new JRadioButton("-1. NS/NR");
+		BGG26 = new ButtonGroup();
+		BGG26.add(RBG26_1);
+		BGG26.add(RBG26_2);
+		BGG26.add(RBG26_3);
+		p5.add(RBG26_1);
+		p5.add(RBG26_2);
+		p5.add(RBG26_3);
+		
+		Warning = new JLabel("Es muy IMPORTANTE QUE SE ESPECIFIQUE TIEMPO:");
+		Warning.setForeground(Color.RED);
+		p5.add(Warning);
+		
+		Inicio = new JLabel("Hace cuantos tiempo padecio herpes zoster");
+		p5.add(Inicio);
+		
+		LG26_1_1 =new JLabel("años (en numero)");
+		p5.add(LG26_1_1);
+		TG26_1_1 = new JTextField(16);
+		p5.add(TG26_1_1);
+		
+		LG26_1_2 =new JLabel("Mes");
+		p5.add(LG26_1_2);
+		TG26_1_2 = new JTextField(16);
+		p5.add(TG26_1_2);
+		
+		LG26_1_3 =new JLabel("Dia");
+		p5.add(LG26_1_3);
+		TG26_1_3 = new JTextField(16);
+		p5.add(TG26_1_3);
+		CBG26_1_4 = new JCheckBox("No aplica");
+		p5.add(CBG26_1_4);
+		
+		LG26_2 =new JLabel("¿Que medicamento recibio para el herpes?");
+		p5.add(LG26_2);
+		TG26_2 = new JTextField(16);
+		p5.add(TG26_2);
+		CBG26_2_1 = new JCheckBox("No aplica");
+		p5.add(CBG26_2_1);
+		
+		LG26_3 =new JLabel("¿Que dosis recibio para el herpes?");
+		p5.add(LG26_3);
+		TG26_3 = new JTextField(16);
+		p5.add(TG26_3);
+		CBG26_3_1 = new JCheckBox("No aplica");
+		p5.add(CBG26_3_1);
+		
+		LG26_4 =new JLabel("¿Que posologia recibio para el herpes?");
+		p5.add(LG26_4);
+		TG26_4 = new JTextField(16);
+		p5.add(TG26_4);
+		CBG26_4_1 = new JCheckBox("No aplica");
+		p5.add(CBG26_4_1);
+		
+		LG26_5 = new JLabel("¿Tuvo dolor posterior al herpes?");
+		p5.add(LG26_5);
+		RBG26_5_1 = new JRadioButton("0.No (pase a J.27)");
+		RBG26_5_2 = new JRadioButton("1.Si (continue)");
+		RBG26_5_3 = new JRadioButton("-1. NS/NR");
+		BGG26_5 = new ButtonGroup();
+		BGG26_5.add(RBG26_5_1);
+		BGG26_5.add(RBG26_5_2);
+		BGG26_5.add(RBG26_5_3);
+		p5.add(RBG26_5_1);
+		p5.add(RBG26_5_2);
+		p5.add(RBG26_5_3);
+		
+		LG26_5_1 =new JLabel("años (en numero)");
+		p5.add(LG26_5_1);
+		TG26_5_1 = new JTextField(16);
+		p5.add(TG26_5_1);
+		
+		LG26_1_2 =new JLabel("Mes");
+		p5.add(LG26_1_2);
+		TG26_1_2 = new JTextField(16);
+		p5.add(TG26_1_2);
+		
+		LG26_1_3 =new JLabel("Dia");
+		p5.add(LG26_1_3);
+		TG26_1_3 = new JTextField(16);
+		p5.add(TG26_1_3);
+		CBG26_1_4 = new JCheckBox("No aplica");
+		p5.add(CBG26_1_4);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		JScrollPane scroll = new JScrollPane(p5);
 		//scroll.add(p5);
