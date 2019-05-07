@@ -1300,14 +1300,48 @@ public class ContIngPaciente implements ActionListener{
 			}
 			
 			//-------------------Empleado----------------------------------------------------
-			
+			//Validar nombreD
+			try{
+				String temp = pIngP.TNombre_1.getText().toString(); //
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
+					throw new Exception();
+				paramsE[0]= temp; //
+			}catch(Exception e1){
+				flag = 0;
+				pIngP.TNombre_1.setText(""); //
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar nombre del empleado valido"); //
+			}
+			//Validar APaternoD
+			try{
+				String temp = pIngP.TAPaterno_1.getText().toString(); //
+				if(!temp.matches("^[a-zA-Z]+$"))
+					throw new Exception();
+				paramsE[1]= temp; //
+			}catch(Exception e1){
+				flag = 0;
+				pIngP.TAPaterno_1.setText(""); //
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar a. paterno del empleado valido"); //
+			}
+			//Validar AMaternoD
+			try{
+				String temp = pIngP.TAMaterno_1.getText().toString(); //
+				if(!temp.matches("^[a-zA-Z]+$"))
+					throw new Exception();
+				paramsE[2]= temp; //
+			}catch(Exception e1){
+				flag = 0;
+				pIngP.TAMaterno_1.setText(""); //
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar a. materno del medico valido"); //
+			}
+			//
+			System.out.println(com.toString());
 			if(flag==0)
 			{
 				JOptionPane.showMessageDialog(pIngP, "Favor de corregir valores");
 			}
 			else
 			{
-				System.out.println(pac.toString());
+				//Buscar empleado
 				//Insertar
 			}
 

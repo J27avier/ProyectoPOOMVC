@@ -1174,7 +1174,7 @@ public class PagIngPaciente extends JFrame
 		Inicio = new JLabel("Hace cuantos tiempo padecio herpes zoster");
 		p5.add(Inicio);
 
-		LG26_1_1 =new JLabel("años (en numero)");
+		LG26_1_1 =new JLabel("anios (en numero)");
 		p5.add(LG26_1_1);
 		TG26_1_1 = new JTextField(16);
 		p5.add(TG26_1_1);
