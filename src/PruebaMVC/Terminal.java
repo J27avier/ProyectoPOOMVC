@@ -47,7 +47,7 @@ public class Terminal {
 		} /**/
 			
 		//Agregar PACIENTES
-		
+		/*
 		try{
 			//Suponemos que ya sabemos el id del empleado que lo agreg�
 			Insertar insert3 = new Insertar(conect.getConnection()); 

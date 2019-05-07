@@ -185,7 +185,11 @@ public class PagIngPaciente extends JFrame
 
 //Se generan las panel que permite pestañas
 		JTabbedPane pestana=new JTabbedPane();
-		//PESTAÃA 1
+		
+		//////////////////////////////
+/////////////////////PESTAnA 1////////////////
+		//////////////////////////////
+		
 				JPanel p1=new JPanel();
 
 				//Se crea el panel que estara dentro del Scroll

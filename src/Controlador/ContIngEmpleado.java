@@ -30,7 +30,7 @@ public class ContIngEmpleado implements ActionListener{
 			//Validar Nombre
 			try {
 				String temp = pIngE.TNombre.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				emp.setNombre(temp);
 			}
