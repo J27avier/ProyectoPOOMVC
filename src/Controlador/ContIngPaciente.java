@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class ContIngPaciente implements ActionListener{
 	Vista.PagIngPaciente pIngP = new Vista.PagIngPaciente();
 	Connection conn;
-	
+
 	public ContIngPaciente(Vista.PagIngPaciente pIngP, Connection conn){
 		this.pIngP = pIngP;
 		this.conn = conn;
@@ -32,7 +32,8 @@ public class ContIngPaciente implements ActionListener{
 			Comorbilidad com= new Comorbilidad();
 			int flag =1;
 			int ETotal = 0, EObjetos = 0, FTotal = 0, GTotal = 0;
-			
+			String[] paramsE = new String[3];
+
 			//validar nombre
 			try {
 				String temp = pIngP.TB1_1.getText().toString();
@@ -458,7 +459,8 @@ public class ContIngPaciente implements ActionListener{
 				flag=0;
 				pIngP.TD7.setText("");
 				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar glaucemia capilar valida. En vez de .123 -> 0.123");
-			}//SATO2%
+			}
+			//SATO2%
 			try {
 				String temp = pIngP.TD8.getText().toString();
 				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
@@ -469,7 +471,8 @@ public class ContIngPaciente implements ActionListener{
 				flag=0;
 				pIngP.TD8.setText("");
 				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar SATO2% valida. En vez de .123 -> 0.123");
-			}//Temperatura
+			}
+			//Temperatura
 			try {
 				String temp = pIngP.TD9.getText().toString();
 				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
@@ -526,13 +529,13 @@ public class ContIngPaciente implements ActionListener{
 				EObjetos += 1;
 			if(pIngP.CBE1_5.isSelected())
 				EObjetos += 1;
-			
+
 			ETotal += EObjetos;
 			tra.setE1(EObjetos);
 			tra.setETotal(ETotal);
-			
+
 			pIngP.LETotalResp.setText(String.valueOf(ETotal));
-			
+
 			//----------------------------------------------Emocional-----------------------------------
 			//F1
 			if(pIngP.RBF1_1.isSelected()){
@@ -674,10 +677,11 @@ public class ContIngPaciente implements ActionListener{
 				flag = 0;
 				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿Se sintio triste?");
 			}
-			
+
 			emo.setFTotal(FTotal);
-			
+
 			//---------------------------------Comorbilidad-------------------------------------------------
+			//G1
 			if(pIngP.RBG1_1.isSelected()){
 				GTotal += 0;
 				com.setG1(0);
@@ -691,6 +695,612 @@ public class ContIngPaciente implements ActionListener{
 				flag = 0;
 				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 1.");
 			}
+			//G2
+			if(pIngP.RBG2_1.isSelected()){
+				GTotal += 0;
+				com.setG2(0);
+			}else if(pIngP.RBG2_2.isSelected()){
+				GTotal += 1;
+				com.setG2(1);
+			}else if(pIngP.RBG2_3.isSelected()){
+				GTotal += 0;
+				com.setG2(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 2.");
+			}			
+			//G3
+			if(pIngP.RBG3_1.isSelected()){
+				GTotal += 0;
+				com.setG3(0);
+			}else if(pIngP.RBG3_2.isSelected()){
+				GTotal += 1;
+				com.setG3(1);
+			}else if(pIngP.RBG3_3.isSelected()){
+				GTotal += 0;
+				com.setG3(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 3.");
+			}			
+			//G4
+			if(pIngP.RBG4_1.isSelected()){
+				GTotal += 0;
+				com.setG4(0);
+			}else if(pIngP.RBG4_2.isSelected()){
+				GTotal += 1;
+				com.setG4(1);
+			}else if(pIngP.RBG4_3.isSelected()){
+				GTotal += 0;
+				com.setG4(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 4.");
+			}			
+			//G5
+			if(pIngP.RBG5_1.isSelected()){
+				GTotal += 0;
+				com.setG5(0);
+			}else if(pIngP.RBG5_2.isSelected()){
+				GTotal += 1;
+				com.setG5(1);
+			}else if(pIngP.RBG5_3.isSelected()){
+				GTotal += 0;
+				com.setG5(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 5.");
+			}			
+			//G6
+			if(pIngP.RBG6_1.isSelected()){
+				GTotal += 0;
+				com.setG6(0);
+			}else if(pIngP.RBG6_2.isSelected()){
+				GTotal += 1;
+				com.setG6(1);
+			}else if(pIngP.RBG6_3.isSelected()){
+				GTotal += 0;
+				com.setG6(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 6.");
+			}			
+			//G7
+			if(pIngP.RBG7_1.isSelected()){
+				GTotal += 0;
+				com.setG7(0);
+			}else if(pIngP.RBG7_2.isSelected()){
+				GTotal += 1;
+				com.setG7(1);
+			}else if(pIngP.RBG7_3.isSelected()){
+				GTotal += 0;
+				com.setG7(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 7.");
+			}			
+			//G8
+			if(pIngP.RBG8_1.isSelected()){
+				GTotal += 0;
+				com.setG8(0);
+			}else if(pIngP.RBG8_2.isSelected()){
+				GTotal += 1;
+				com.setG8(1);
+			}else if(pIngP.RBG8_3.isSelected()){
+				GTotal += 0;
+				com.setG8(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 8.");
+			}			
+			//G9
+			if(pIngP.RBG9_1.isSelected()){
+				GTotal += 0;
+				com.setG9(0);
+			}else if(pIngP.RBG9_2.isSelected()){
+				GTotal += 1;
+				com.setG9(1);
+			}else if(pIngP.RBG9_3.isSelected()){
+				GTotal += 0;
+				com.setG9(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 9.");
+			}			
+			//G10
+			if(pIngP.RBG10_1.isSelected()){
+				GTotal += 0;
+				com.setG10(0);
+			}else if(pIngP.RBG10_2.isSelected()){
+				GTotal += 1;
+				com.setG10(1);
+			}else if(pIngP.RBG10_3.isSelected()){
+				GTotal += 0;
+				com.setG10(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 10.");
+			}			
+			//G11
+			if(pIngP.RBG11_1.isSelected()){
+				GTotal += 0;
+				com.setG11(0);
+			}else if(pIngP.RBG11_2.isSelected()){
+				GTotal += 1;
+				com.setG11(1);
+			}else if(pIngP.RBG11_3.isSelected()){
+				GTotal += 0;
+				com.setG11(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 11.");
+			}			
+			//G12
+			if(pIngP.RBG12_1.isSelected()){
+				GTotal += 0;
+				com.setG12(0);
+			}else if(pIngP.RBG12_2.isSelected()){
+				GTotal += 1;
+				com.setG12(1);
+			}else if(pIngP.RBG12_3.isSelected()){
+				GTotal += 0;
+				com.setG12(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 12.");
+			}			
+			//G13
+			if(pIngP.RBG13_1.isSelected()){
+				GTotal += 0;
+				com.setG13(0);
+			}else if(pIngP.RBG13_2.isSelected()){
+				GTotal += 1;
+				com.setG13(1);
+			}else if(pIngP.RBG13_3.isSelected()){
+				GTotal += 0;
+				com.setG13(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 13.");
+			}			
+			//G14
+			if(pIngP.RBG14_1.isSelected()){
+				GTotal += 0;
+				com.setG14(0);
+			}else if(pIngP.RBG14_2.isSelected()){
+				GTotal += 1;
+				com.setG14(1);
+			}else if(pIngP.RBG14_3.isSelected()){
+				GTotal += 0;
+				com.setG14(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 14.");
+			}			
+			//G15
+			if(pIngP.RBG15_1.isSelected()){
+				GTotal += 0;
+				com.setG15(0);
+			}else if(pIngP.RBG15_2.isSelected()){
+				GTotal += 1;
+				com.setG15(1);
+			}else if(pIngP.RBG15_3.isSelected()){
+				GTotal += 0;
+				com.setG15(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 15.");
+			}			
+			//G16
+			if(pIngP.RBG16_1.isSelected()){
+				GTotal += 0;
+				com.setG16(0);
+			}else if(pIngP.RBG16_2.isSelected()){
+				GTotal += 1;
+				com.setG16(1);
+			}else if(pIngP.RBG16_3.isSelected()){
+				GTotal += 0;
+				com.setG16(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 16.");
+			}			
+			//G17
+			if(pIngP.RBG17_1.isSelected()){
+				GTotal += 0;
+				com.setG17(0);
+			}else if(pIngP.RBG17_2.isSelected()){
+				GTotal += 1;
+				com.setG17(1);
+			}else if(pIngP.RBG17_3.isSelected()){
+				GTotal += 0;
+				com.setG17(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 17.");
+			}			
+			//G18
+			if(pIngP.RBG18_1.isSelected()){
+				GTotal += 0;
+				com.setG18(0);
+			}else if(pIngP.RBG18_2.isSelected()){
+				GTotal += 1;
+				com.setG18(1);
+			}else if(pIngP.RBG18_3.isSelected()){
+				GTotal += 0;
+				com.setG18(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 18.");
+			}			
+			//G19
+			if(pIngP.RBG19_1.isSelected()){
+				GTotal += 0;
+				com.setG19(0);
+			}else if(pIngP.RBG19_2.isSelected()){
+				GTotal += 1;
+				com.setG19(1);
+			}else if(pIngP.RBG19_3.isSelected()){
+				GTotal += 0;
+				com.setG19(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 19.");
+			}
+
+			com.setGTotal(GTotal);
+
+			//G20
+			if(pIngP.RBG20_1.isSelected()){
+				GTotal += 0;
+				com.setG20(0);
+			}else if(pIngP.RBG20_2.isSelected()){
+				GTotal += 1;
+				com.setG20(1);
+			}else if(pIngP.RBG20_3.isSelected()){
+				GTotal += 0;
+				com.setG20(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 20.");
+			}
+			//G21
+			if(pIngP.RBG21_1.isSelected()){
+				GTotal += 0;
+				com.setG21(0);
+			}else if(pIngP.RBG21_2.isSelected()){
+				GTotal += 1;
+				com.setG21(1);
+			}else if(pIngP.RBG21_3.isSelected()){
+				GTotal += 0;
+				com.setG21(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 21.");
+			}
+			//G22
+			if(pIngP.RBG22_1.isSelected()){
+				GTotal += 0;
+				com.setG22(0);
+			}else if(pIngP.RBG22_2.isSelected()){
+				GTotal += 1;
+				com.setG22(1);
+			}else if(pIngP.RBG22_3.isSelected()){
+				GTotal += 0;
+				com.setG22(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 22.");
+			}
+			//G23
+			if(pIngP.RBG23_1.isSelected()){
+				GTotal += 0;
+				com.setG23(0);
+			}else if(pIngP.RBG23_2.isSelected()){
+				GTotal += 1;
+				com.setG23(1);
+			}else if(pIngP.RBG23_3.isSelected()){
+				GTotal += 0;
+				com.setG23(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 23.");
+			}
+			//G24
+			if(pIngP.RBG24_1.isSelected()){
+				GTotal += 0;
+				com.setG24(0);
+			}else if(pIngP.RBG24_2.isSelected()){
+				GTotal += 1;
+				com.setG24(1);
+			}else if(pIngP.RBG24_3.isSelected()){
+				GTotal += 0;
+				com.setG24(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 24.");
+			}
+			//G25
+			if(pIngP.RBG25_1.isSelected()){
+				GTotal += 0;
+				com.setG25(0);
+			}else if(pIngP.RBG25_2.isSelected()){
+				GTotal += 1;
+				com.setG25(1);
+			}else if(pIngP.RBG25_3.isSelected()){
+				GTotal += 0;
+				com.setG25(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 25.");
+			}
+
+
+			if(!pIngP.CBG26_1_4.isSelected()){
+				com.setG26_1_4(0);
+				//G26
+				if(pIngP.RBG26_1.isSelected()){
+					GTotal += 0;
+					com.setG26(0);
+				}else if(pIngP.RBG26_2.isSelected()){
+					GTotal += 1;
+					com.setG26(1);
+				}else if(pIngP.RBG26_3.isSelected()){
+					GTotal += 0;
+					com.setG26(-1);
+				}else{
+					flag = 0;
+					JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad zoster o no aplica.");
+				}
+				//G26_1_1
+				try {
+					String temp = pIngP.TG26_1_1.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_1_1(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_1_1.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar anios de herpes (puede ser 0)");
+				}
+				//G26_1_2
+				try {
+					String temp = pIngP.TG26_1_2.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_1_2(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_1_2.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar meses de herpes (puede ser 0)");
+				}
+				//G26_1_3
+				try {
+					String temp = pIngP.TG26_1_3.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_1_3(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_1_3.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar dias de herpes (puede ser 0)");
+				}
+			}else{
+				com.setG26_1_4(1);
+			}//No aplica
+			
+			//G26_2
+			if(!pIngP.CBG26_2_1.isSelected()){
+				com.setG26_2_1(0);
+				com.setG26_2(pIngP.TG26_2.getText().toString());
+			}else{
+				com.setG26_2_1(1);
+				com.setG26_2("");
+			}
+			//G26_3
+			if(!pIngP.CBG26_3_1.isSelected()){
+				com.setG26_3_1(0);
+				com.setG26_3(pIngP.TG26_3.getText().toString());
+			}else{
+				com.setG26_3_1(1);
+				com.setG26_3("");
+			}
+			//G26_4
+			if(!pIngP.CBG26_4_1.isSelected()){
+				com.setG26_4_1(0);
+				com.setG26_4(pIngP.TG26_4.getText().toString());
+			}else{
+				com.setG26_4_1(1);
+				com.setG26_4("");
+			}
+			
+			//G26_5 Radio 3 opciones, anio, mes, dia no aplica
+			if(!pIngP.CBG26_5_4.isSelected()){
+				com.setG26_5_4(0);
+				if(pIngP.RBG26_5_1.isSelected()){
+					com.setG26_5(0);
+				}else if(pIngP.RBG26_5_2.isSelected()){
+					com.setG26_5(1);
+				}else if(pIngP.RBG26_5_3.isSelected()){
+					com.setG26_5(-1);
+				}else{
+					flag = 0;
+					JOptionPane.showMessageDialog(pIngP, "Favor de contestar tuvo dolor posterior al herpes... o no aplica");
+				}
+				//Anio dia mes
+				//G26_5_1
+				try {
+					String temp = pIngP.TG26_5_1.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_5_1(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_5_1.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar anios de dolor (puede ser 0)");
+				}
+				//G26_5_2
+				try {
+					String temp = pIngP.TG26_5_2.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_5_2(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_5_2.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar meses de dolor (puede ser 0)");
+				}
+				//G26_5_3
+				try {
+					String temp = pIngP.TG26_5_3.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_5_3(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_5_3.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar dias de dolor (puede ser 0)");
+				}
+				
+			}else{
+				com.setG26_5_4(1);
+			} // No aplica
+			
+			//G26_5_5
+			if(!pIngP.CBG26_5_5_1.isSelected()){
+				com.setG26_5_5_1(0);
+				com.setG26_5_5(pIngP.TG26_5_5.getText().toString());
+			}else{
+				com.setG26_5_5_1(1);
+				com.setG26_5_5("");
+			}
+			//G26_5_6
+			if(!pIngP.CBG26_5_6_1.isSelected()){
+				com.setG26_5_6_1(0);
+				com.setG26_5_6(pIngP.TG26_5_6.getText().toString());
+			}else{
+				com.setG26_5_6_1(1);
+				com.setG26_5_6("");
+			}
+			//G26_5_7
+			if(!pIngP.CBG26_5_7_1.isSelected()){
+				com.setG26_5_7_1(0);
+				com.setG26_5_7(pIngP.TG26_5_7.getText().toString());
+			}else{
+				com.setG26_5_7_1(1);
+				com.setG26_5_7("");
+			}
+			
+			//G26_5_8
+			// anio, mes, dia no aplica
+			if(!pIngP.CBG26_5_8_4.isSelected()){
+				com.setG26_5_8_4(0);
+				//Anio dia mes
+				//G26_5_1
+				try {
+					String temp = pIngP.TG26_5_8_1.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_5_8_1(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_5_8_1.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar anios de dolor (puede ser 0)");
+				}
+				//G26_5_2
+				try {
+					String temp = pIngP.TG26_5_8_2.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_5_8_2(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_5_8_2.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar meses de dolor (puede ser 0)");
+				}
+				//G26_5_3
+				try {
+					String temp = pIngP.TG26_5_8_3.getText().toString();
+					if(!temp.matches("^([0-9])+$"))
+						throw new Exception();
+					com.setG26_5_8_3(Integer.valueOf(temp));
+				}
+				catch(Exception e1) {
+					flag=0;
+					pIngP.TG26_5_8_3.setText("");
+					JOptionPane.showMessageDialog(pIngP, "Favor de ingresar dias de dolor (puede ser 0)");
+				}
+				
+			}else{
+				com.setG26_5_8_4(1);
+			} // No aplica
+			
+			//G27
+			if(pIngP.RBG27_1.isSelected()){
+				GTotal += 0;
+				com.setG27(0);
+			}else if(pIngP.RBG27_2.isSelected()){
+				GTotal += 1;
+				com.setG27(1);
+			}else if(pIngP.RBG27_3.isSelected()){
+				GTotal += 0;
+				com.setG27(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 27.");
+			}
+			//G28
+			if(pIngP.RBG28_1.isSelected()){
+				GTotal += 0;
+				com.setG28(0);
+			}else if(pIngP.RBG28_2.isSelected()){
+				GTotal += 1;
+				com.setG28(1);
+			}else if(pIngP.RBG28_3.isSelected()){
+				GTotal += 0;
+				com.setG28(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 28.");
+			}
+			//G29
+			if(pIngP.RBG29_1.isSelected()){
+				GTotal += 0;
+				com.setG29(0);
+			}else if(pIngP.RBG29_2.isSelected()){
+				GTotal += 1;
+				com.setG29(1);
+			}else if(pIngP.RBG29_3.isSelected()){
+				GTotal += 0;
+				com.setG29(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 29.");
+			}
+			//G30
+			com.setG30(pIngP.TG30.getText().toString());
+			//G31
+			com.setG30_1(pIngP.TG30_1.getText().toString());
+			
+			//G31
+			if(!pIngP.CBG31_1.isSelected()){
+				com.setG31_1(0);
+				com.setG31(pIngP.TG31.getText().toString());
+			}else{
+				com.setG31_1(1);
+				com.setG31("");
+			}
+			
+			//-------------------Empleado----------------------------------------------------
+			
 			if(flag==0)
 			{
 				JOptionPane.showMessageDialog(pIngP, "Favor de corregir valores");
@@ -700,7 +1310,7 @@ public class ContIngPaciente implements ActionListener{
 				System.out.println(pac.toString());
 				//Insertar
 			}
-			
+
 		}
 	}
 }
