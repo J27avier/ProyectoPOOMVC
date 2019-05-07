@@ -24,6 +24,7 @@ public class ContIngPaciente implements ActionListener{
 		if(evento.getSource()==pIngP.ingresar1)
 		{
 			Insertar ins = new Insertar(conn);
+			Buscar bus = new Buscar(conn);
 			Empleado emp = new Empleado();
 			Paciente pac = new Paciente();
 			Tension ten = new Tension();
@@ -33,7 +34,8 @@ public class ContIngPaciente implements ActionListener{
 			int flag =1;
 			int ETotal = 0, EObjetos = 0, FTotal = 0, GTotal = 0;
 			String[] paramsE = new String[3];
-
+			/**/
+			//----------------Paciente-------------------------------
 			//validar nombre
 			try {
 				String temp = pIngP.TB1_1.getText().toString();
@@ -679,7 +681,7 @@ public class ContIngPaciente implements ActionListener{
 			}
 
 			emo.setFTotal(FTotal);
-
+			/**/
 			//---------------------------------Comorbilidad-------------------------------------------------
 			//G1
 			if(pIngP.RBG1_1.isSelected()){
@@ -1334,17 +1336,27 @@ public class ContIngPaciente implements ActionListener{
 				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar a. materno del medico valido"); //
 			}
 			//
-			System.out.println(com.toString());
+			 
+			 /**/
 			if(flag==0)
 			{
 				JOptionPane.showMessageDialog(pIngP, "Favor de corregir valores");
 			}
 			else
 			{
-				//Buscar empleado
-				//Insertar
-			}
-
-		}
-	}
-}
+				emp = bus.bEmpleado(paramsE);
+				if(emp.getId_empleado() == -1){
+					JOptionPane.showMessageDialog(pIngP, "No se encontro al empleado. VUELVA A INTENTAR");
+				}else{
+					try{
+					ins.iPaciente(emp, pac, ten, tra, emo, com);
+					JOptionPane.showMessageDialog(pIngP, "Paciente agregado EXITOSAMENTE!");
+					}catch(Exception e){
+						e.printStackTrace();
+						JOptionPane.showMessageDialog(pIngP, "Error al agregar paciente :(");
+					}//catch
+				}// if empleado
+			}// if flag
+		}// if evento get source
+	}// if actionPerformed
+}//Clase
