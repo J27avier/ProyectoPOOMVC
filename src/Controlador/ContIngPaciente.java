@@ -31,6 +31,7 @@ public class ContIngPaciente implements ActionListener{
 			Emocional emo= new Emocional();
 			Comorbilidad com= new Comorbilidad();
 			int flag =1;
+			int ETotal = 0, EObjetos = 0, FTotal = 0, GTotal = 0;
 			
 			//validar nombre
 			try {
@@ -114,7 +115,7 @@ public class ContIngPaciente implements ActionListener{
 			//validar Num. exterior
 			try {
 				String temp = pIngP.TB5_2.getText().toString();
-				if(!temp.matches("^[0-9]+$"))
+				if(!temp.matches("^[a-zA-Z0-9]+$"))
 					throw new Exception();
 				pac.setB5_2(temp);
 			}
@@ -372,7 +373,324 @@ public class ContIngPaciente implements ActionListener{
 				pIngP.TC4.setText("");
 				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar comentario valido");
 			}
+			//---------------------Validando tension----------------------------------------
+			//Regex para double ^([0-9]+)(.)?([0-9]+)?$
+			//Sistolica sentado
+			try {
+				String temp = pIngP.TD1.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD1(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD1.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar sistolica sentado valida. En vez de .123 -> 0.123");
+			}
+			//Diastolica sentado
+			try {
+				String temp = pIngP.TD2.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD2(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD2.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar diastolica sentado valida. En vez de .123 -> 0.123");
+			}
+			//Sistolica parado
+			try {
+				String temp = pIngP.TD3.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD3(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD3.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar sistolica parado valida. En vez de .123 -> 0.123");
+			}
+			//Diastolica parado
+			try {
+				String temp = pIngP.TD4.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD4(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD4.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar diastolica parado valida. En vez de .123 -> 0.123");
+			}
+			//Cardiaca
+			try {
+				String temp = pIngP.TD5.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD5(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD5.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar f cardiaca valida. En vez de .123 -> 0.123");
+			}
+			//Resp
+			try {
+				String temp = pIngP.TD6.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD6(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD6.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar f resp valida. En vez de .123 -> 0.123");
+			}
+			//Glaucemia capilar
+			try {
+				String temp = pIngP.TD7.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD7(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD7.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar glaucemia capilar valida. En vez de .123 -> 0.123");
+			}//SATO2%
+			try {
+				String temp = pIngP.TD8.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD8(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD8.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar SATO2% valida. En vez de .123 -> 0.123");
+			}//Temperatura
+			try {
+				String temp = pIngP.TD9.getText().toString();
+				if(!temp.matches("^([0-9]+)(.)?([0-9]+)?$"))
+					throw new Exception();
+				ten.setD9(Double.valueOf(temp));
+			}
+			catch(Exception e1) {
+				flag=0;
+				pIngP.TD9.setText("");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar temperatura °C valida. En vez de .123 -> 0.123");
+			}
+			//-------------------------------- Trastornos -----------------------------------------
+			//Numeros
+			if(pIngP.RBE0_1_1.isSelected()){
+				ETotal += 2;
+				tra.setE0_1(2);
+			}else if(pIngP.RBE0_1_2.isSelected()){
+				ETotal += 0;
+				tra.setE0_1(0);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar puntos por numeros correctos");
+			}
+			//Hora
+			if(pIngP.RBE0_2_1.isSelected()){
+				ETotal += 2;
+				tra.setE0_2(2);
+			}else if(pIngP.RBE0_2_2.isSelected()){
+				ETotal += 0;
+				tra.setE0_2(0);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar puntos por hora correcta");
+			}
+			//Estado
+			if(pIngP.RBE2_1.isSelected()){
+				ETotal += 1;
+				tra.setE2(1);
+			}else if(pIngP.RBE2_2.isSelected()){
+				ETotal += 0;
+				tra.setE2(0);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar puntos por estado correcto");
+			}
+			//Objetos
+			if(pIngP.CBE1_1.isSelected())
+				EObjetos += 1;
+			if(pIngP.CBE1_2.isSelected())
+				EObjetos += 1;
+			if(pIngP.CBE1_3.isSelected())
+				EObjetos += 1;
+			if(pIngP.CBE1_4.isSelected())
+				EObjetos += 1;
+			if(pIngP.CBE1_5.isSelected())
+				EObjetos += 1;
 			
+			ETotal += EObjetos;
+			tra.setE1(EObjetos);
+			tra.setETotal(ETotal);
+			
+			pIngP.LETotalResp.setText(String.valueOf(ETotal));
+			
+			//----------------------------------------------Emocional-----------------------------------
+			//F1
+			if(pIngP.RBF1_1.isSelected()){
+				FTotal += 0;
+				emo.setF1(0);
+			}else if(pIngP.RBF1_2.isSelected()){
+				FTotal += 1;
+				emo.setF1(1);
+			}else if(pIngP.RBF1_3.isSelected()){
+				FTotal += 2;
+				emo.setF1(2);
+			}else if(pIngP.RBF1_4.isSelected()){
+				FTotal += 3;
+				emo.setF1(3);
+			}else if(pIngP.RBF1_5.isSelected()){
+				FTotal += 0;
+				emo.setF1(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿Sentía que no podia quitarse...?");
+			}
+			//F2
+			if(pIngP.RBF2_1.isSelected()){
+				FTotal += 0;
+				emo.setF2(0);
+			}else if(pIngP.RBF2_2.isSelected()){
+				FTotal += 1;
+				emo.setF2(1);
+			}else if(pIngP.RBF2_3.isSelected()){
+				FTotal += 2;
+				emo.setF2(2);
+			}else if(pIngP.RBF2_4.isSelected()){
+				FTotal += 3;
+				emo.setF2(3);
+			}else if(pIngP.RBF2_5.isSelected()){
+				FTotal += 0;
+				emo.setF2(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿Le costaba consentrarse...?");
+			}
+			//F3
+			if(pIngP.RBF3_1.isSelected()){
+				FTotal += 0;
+				emo.setF3(0);
+			}else if(pIngP.RBF3_2.isSelected()){
+				FTotal += 1;
+				emo.setF3(1);
+			}else if(pIngP.RBF3_3.isSelected()){
+				FTotal += 2;
+				emo.setF3(2);
+			}else if(pIngP.RBF3_4.isSelected()){
+				FTotal += 3;
+				emo.setF3(3);
+			}else if(pIngP.RBF3_5.isSelected()){
+				FTotal += 0;
+				emo.setF3(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿Se sintio depri...?");
+			}
+			//F4
+			if(pIngP.RBF4_1.isSelected()){
+				FTotal += 0;
+				emo.setF4(0);
+			}else if(pIngP.RBF4_2.isSelected()){
+				FTotal += 1;
+				emo.setF4(1);
+			}else if(pIngP.RBF4_3.isSelected()){
+				FTotal += 2;
+				emo.setF4(2);
+			}else if(pIngP.RBF4_4.isSelected()){
+				FTotal += 3;
+				emo.setF4(3);
+			}else if(pIngP.RBF4_5.isSelected()){
+				FTotal += 0;
+				emo.setF4(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿Le parecia que todo...");
+			}
+			//F5
+			if(pIngP.RBF5_1.isSelected()){
+				FTotal += 0;
+				emo.setF5(0);
+			}else if(pIngP.RBF5_2.isSelected()){
+				FTotal += 1;
+				emo.setF5(1);
+			}else if(pIngP.RBF5_3.isSelected()){
+				FTotal += 2;
+				emo.setF5(2);
+			}else if(pIngP.RBF5_4.isSelected()){
+				FTotal += 3;
+				emo.setF5(3);
+			}else if(pIngP.RBF5_5.isSelected()){
+				FTotal += 0;
+				emo.setF5(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿No durmio bien?");
+			}
+			//F6
+			if(pIngP.RBF6_1.isSelected()){
+				FTotal += 0;
+				emo.setF6(0);
+			}else if(pIngP.RBF6_2.isSelected()){
+				FTotal += 1;
+				emo.setF6(1);
+			}else if(pIngP.RBF6_3.isSelected()){
+				FTotal += 2;
+				emo.setF6(2);
+			}else if(pIngP.RBF6_4.isSelected()){
+				FTotal += 3;
+				emo.setF6(3);
+			}else if(pIngP.RBF6_5.isSelected()){
+				FTotal += 0;
+				emo.setF6(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿Disfruto de la vida?");
+			}
+			//F7
+			if(pIngP.RBF7_1.isSelected()){
+				FTotal += 0;
+				emo.setF7(0);
+			}else if(pIngP.RBF7_2.isSelected()){
+				FTotal += 1;
+				emo.setF7(1);
+			}else if(pIngP.RBF7_3.isSelected()){
+				FTotal += 2;
+				emo.setF7(2);
+			}else if(pIngP.RBF7_4.isSelected()){
+				FTotal += 3;
+				emo.setF7(3);
+			}else if(pIngP.RBF7_5.isSelected()){
+				FTotal += 0;
+				emo.setF7(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar ¿Se sintio triste?");
+			}
+			
+			emo.setFTotal(FTotal);
+			
+			//---------------------------------Comorbilidad-------------------------------------------------
+			if(pIngP.RBG1_1.isSelected()){
+				GTotal += 0;
+				com.setG1(0);
+			}else if(pIngP.RBG1_2.isSelected()){
+				GTotal += 1;
+				com.setG1(1);
+			}else if(pIngP.RBG1_3.isSelected()){
+				GTotal += 0;
+				com.setG1(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 1.");
+			}
 			if(flag==0)
 			{
 				JOptionPane.showMessageDialog(pIngP, "Favor de corregir valores");
@@ -380,6 +698,7 @@ public class ContIngPaciente implements ActionListener{
 			else
 			{
 				System.out.println(pac.toString());
+				//Insertar
 			}
 			
 		}

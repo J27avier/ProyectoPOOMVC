@@ -32,7 +32,7 @@ public class ContIngCita implements ActionListener{
 			//Validar NombreP
 			try{
 				String temp = pIngC.tNombreP.getText().toString(); //
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsP[0]= temp; //
 			}catch(Exception e1){
@@ -65,7 +65,7 @@ public class ContIngCita implements ActionListener{
 			//Validar nombreD
 			try{
 				String temp = pIngC.tNombreD.getText().toString(); //
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[0]= temp; //
 			}catch(Exception e1){

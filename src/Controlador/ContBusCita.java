@@ -36,7 +36,7 @@ public class ContBusCita implements ActionListener{
 			//Validar nombre
 			try {
 				String temp = pBusC.tNombre.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[0] = temp;
 			}

@@ -29,7 +29,7 @@ public class ContBusEmpleado implements ActionListener{
 			//Validar nombre
 			try{
 				String temp = pBusE.tNombre.getText();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[0]=temp;
 			}catch(Exception e1){
