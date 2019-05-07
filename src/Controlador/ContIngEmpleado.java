@@ -71,7 +71,7 @@ public class ContIngEmpleado implements ActionListener{
 				JOptionPane.showMessageDialog(pIngE, "Favor de introducir una direccion");
 				flag = 0;
 			}
-			//De java.util.Date a java.sql.Date, está más que insegurp si no es con dateChooser
+			//De java.util.Date a java.sql.Date, estï¿½ mï¿½s que insegurp si no es con dateChooser
 			if(pIngE.dateChooser.getDate() != null){
 				String DOB = String.format("%d-%d-%d", (1900 + pIngE.dateChooser.getDate().getYear()), (pIngE.dateChooser.getDate().getMonth()+1), pIngE.dateChooser.getDate().getDate());
 				emp.setDOB(java.sql.Date.valueOf(DOB));
@@ -86,6 +86,7 @@ public class ContIngEmpleado implements ActionListener{
 				JOptionPane.showMessageDialog(pIngE, "Favor de corregir valores");
 			}
 			else{
+				System.out.println(emp.toString());
 				int success = ins.iEmpleado(emp);
 				if(success==1)
 					JOptionPane.showMessageDialog(pIngE, "El empleado se agrego exitosamente");
