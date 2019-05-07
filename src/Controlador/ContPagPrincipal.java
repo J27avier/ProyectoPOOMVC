@@ -47,6 +47,7 @@ public class ContPagPrincipal implements ActionListener
 		{
 			//Crear controlador Ing paciente
 			Vista.PagIngPaciente pIngPac = new Vista.PagIngPaciente();
+			ContIngPaciente cIngP= new ContIngPaciente(pIngPac,conn);
 			pIngPac.setVisible(true);
 		}
 		if(evento.getSource()==pPrincipal.Opcion5)
