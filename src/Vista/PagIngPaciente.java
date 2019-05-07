@@ -151,7 +151,7 @@ public class PagIngPaciente extends JFrame
 	
 	public JLabel LG1,LG2,LG3,LG4,LG5,LG6,LG7,LG8,LG9,LG10,LG11,LG12,LG13,LG14,LG15,LG16,LG17,LG18,LG19;
 	public JLabel LGTotal,LGTotalResp, LG20,LG21,LG22,LG23,LG24,LG25,LG26;
-	public JLabel Warning,Inicio,LG26_1_1,LG26_1_2,LG26_1_3,LG26_1_4,LG26_2,LG26_2_1,LG26_3,LG26_3_1,LG26_4,LG26_4_1,LG26_5,LG26_5_1,LG26_5_2,LG26_5_3,LG26_5_4,LG26_5_5,LG26_5_5_1,LG26_5__6,LG26_5_6_1,LG26_5_7,LG26_5_7_1,LG26_5_8_1,LG26_5_8_2,LG26_5_8_3,LG26_5_8_4,LG27,LG28,LG29,LG30,LG30_1,LG31,LG31_1;
+	public JLabel Warning,Inicio,LG26_1_1,LG26_1_2,LG26_1_3,LG26_1_4,LG26_2,LG26_2_1,LG26_3,LG26_3_1,LG26_4,LG26_4_1,LG26_5,LG26_5_1,LG26_5_2,LG26_5_3,LG26_5_4,LG26_5_5,LG26_5_5_1,LG26_5_6,LG26_5_6_1,LG26_5_7,LG26_5_7_1,LG26_5_8_1,LG26_5_8_2,LG26_5_8_3,LG26_5_8_4,LG27,LG28,LG29,LG30,LG30_1,LG31,LG31_1;
 	public JRadioButton RBG1_1,RBG1_2,RBG1_3,RBG2_1,RBG2_2,RBG2_3,RBG3_1,RBG3_2,RBG3_3,RBG4_1,RBG4_2,RBG4_3,RBG5_1,RBG5_2,RBG5_3,RBG6_1,RBG6_2,RBG6_3,RBG7_1,RBG7_2,RBG7_3,RBG8_1,RBG8_2,RBG8_3,RBG9_1,RBG9_2,RBG9_3,RBG10_1,RBG10_2,RBG10_3,RBG11_1,RBG11_2,RBG11_3,RBG12_1,RBG12_2,RBG12_3,RBG13_1,RBG13_2,RBG13_3,RBG14_1,RBG14_2,RBG14_3,RBG15_1,RBG15_2,RBG15_3,RBG16_1,RBG16_2,RBG16_3,RBG17_1,RBG17_2,RBG17_3,RBG18_1,RBG18_2,RBG18_3,RBG19_1,RBG19_2,RBG19_3;
 	public JRadioButton RBG20_1,RBG20_2,RBG20_3,RBG21_1,RBG21_2,RBG21_3,RBG22_1,RBG22_2,RBG22_3,RBG23_1,RBG23_2,RBG23_3,RBG24_1,RBG24_2,RBG24_3,RBG25_1,RBG25_2,RBG25_3,RBG26_1,RBG26_2,RBG26_3;
 	
@@ -1226,36 +1226,117 @@ p4.add(RBF7_5);
 		TG26_5_1 = new JTextField(16);
 		p5.add(TG26_5_1);
 		
-		LG26_1_2 =new JLabel("Mes");
-		p5.add(LG26_1_2);
-		TG26_1_2 = new JTextField(16);
-		p5.add(TG26_1_2);
+		LG26_5_2 =new JLabel("Mes");
+		p5.add(LG26_5_2);
+		TG26_5_2 = new JTextField(16);
+		p5.add(TG26_5_2);
 		
-		LG26_1_3 =new JLabel("Dia");
-		p5.add(LG26_1_3);
-		TG26_1_3 = new JTextField(16);
-		p5.add(TG26_1_3);
-		CBG26_1_4 = new JCheckBox("No aplica");
-		p5.add(CBG26_1_4);
+		LG26_5_3 =new JLabel("Dia");
+		p5.add(LG26_5_3);
+		TG26_5_3 = new JTextField(16);
+		p5.add(TG26_5_3);
+		CBG26_5_4 = new JCheckBox("No recuerda/aplica");
+		p5.add(CBG26_5_4);
+		
+		LG26_5_5 =new JLabel("¿Que medicamento recibio para el dolor?");
+		p5.add(LG26_5_5);
+		TG26_5_5 = new JTextField(16);
+		p5.add(TG26_5_5);
+		CBG26_5_5_1 = new JCheckBox("No aplica");
+		p5.add(CBG26_5_5_1);
+		
+		LG26_5_6 =new JLabel("¿Que dosis recibio para el dolor?");
+		p5.add(LG26_5_6);
+		TG26_5_6 = new JTextField(16);
+		p5.add(TG26_5_6);
+		CBG26_5_6_1 = new JCheckBox("No aplica");
+		p5.add(CBG26_5_6_1);
+		
+		LG26_5_7 =new JLabel("¿Que posologia recibio para el dolor?");
+		p5.add(LG26_5_7);
+		TG26_5_7 = new JTextField(16);
+		p5.add(TG26_5_7);
+		CBG26_5_7_1 = new JCheckBox("No aplica");
+		p5.add(CBG26_5_7_1);
+		
+		LG26_5_8_1 =new JLabel("años (en numero)");
+		p5.add(LG26_5_8_1);
+		TG26_5_8_1 = new JTextField(16);
+		p5.add(TG26_5_8_1);
+		
+		LG26_5_8_2 =new JLabel("Mes");
+		p5.add(LG26_5_8_2);
+		TG26_5_8_2 = new JTextField(16);
+		p5.add(TG26_5_8_2);
+		
+		LG26_5_8_3 =new JLabel("Dia");
+		p5.add(LG26_5_8_3);
+		TG26_5_8_3 = new JTextField(16);
+		p5.add(TG26_5_8_3);
+		CBG26_5_8_4 = new JCheckBox("No recuerda/aplica");
+		p5.add(CBG26_5_8_4);
+		
+		LG27 = new JLabel("¿Asma?");
+		p5.add(LG27);
+		RBG27_1 = new JRadioButton("0.No");
+		RBG27_2 = new JRadioButton("1.Si");
+		RBG27_3 = new JRadioButton("-1. NS/NR");
+		BGG27 = new ButtonGroup();
+		BGG27.add(RBG27_1);
+		BGG27.add(RBG27_2);
+		BGG27.add(RBG27_3);
+		p5.add(RBG27_1);
+		p5.add(RBG27_2);
+		p5.add(RBG27_3);
+		
+		LG28 = new JLabel("¿Alguna enfermedad atoinmune como lupus eritematoso sistemico, artitis reumatoide, polimiosis,etc?");
+		p5.add(LG28);
+		RBG28_1 = new JRadioButton("0.No");
+		RBG28_2 = new JRadioButton("1.Si");
+		RBG28_3 = new JRadioButton("-1. NS/NR");
+		BGG28 = new ButtonGroup();
+		BGG28.add(RBG28_1);
+		BGG28.add(RBG28_2);
+		BGG28.add(RBG28_3);
+		p5.add(RBG28_1);
+		p5.add(RBG28_2);
+		p5.add(RBG28_3);
+		
+		LG29 = new JLabel("¿Demencia?");
+		p5.add(LG29);
+		RBG29_1 = new JRadioButton("0.No");
+		RBG29_2 = new JRadioButton("1.Si");
+		RBG29_3 = new JRadioButton("-1. NS/NR");
+		BGG29 = new ButtonGroup();
+		BGG29.add(RBG29_1);
+		BGG29.add(RBG29_2);
+		BGG29.add(RBG29_3);
+		p5.add(RBG29_1);
+		p5.add(RBG29_2);
+		p5.add(RBG29_3);
 		
 		
+		LG30 =new JLabel("Que tipo de demencia padece? (Alzheimer, vascular, mixta,Frntotemporal, asociadda a cuerpos de lewy, asociada a parkinson, afasiaprimaria progresiva");
+		p5.add(LG30);
+		TG30 = new JTextField(16);
+		p5.add(TG30);
 		
+		LG30_1 =new JLabel("¿Otra? especifique:");
+		p5.add(LG30_1);
+		TG30_1 = new JTextField(16);
+		p5.add(TG30_1);
 		
+		LG31 =new JLabel("¿Tiene alguna oitra enfermedad que no haya mencionado anteriormente?");
+		p5.add(LG31);
+		TG31 = new JTextField(16);
+		p5.add(TG31);
 		
+		CBG31_1 = new JCheckBox("No aplica");
+		p5.add(CBG31_1);
 		
-		
-		
-		
-		
-		
+				
 		JScrollPane scroll = new JScrollPane(p5);
-		//scroll.add(p5);
-		//scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		//JPanel p5_1 = new JPanel();
-		//JFrame jf = new JFrame();
-		
-		//jf.add(scroll,BorderLayout.CENTER);
-		///p5_1.add(scroll,BorderLayout.CENTER);
+
 		
 ///////////////////////////////////////
 ///////////////////////////////////////
