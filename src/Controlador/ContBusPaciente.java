@@ -90,6 +90,8 @@ public class ContBusPaciente implements ActionListener{
 					if(pac.getId_empleado() == -1){
 						JOptionPane.showMessageDialog(pBusP, "Paciente no encontrado");
 					}else{
+						Empleado emp = new Empleado();
+						emp = bus.bEmpleado(pac.getId_empleado());
 						pBusP.pResultados.removeAll();
 						pBusP.pResultados.updateUI();
 						pBusP.pResultados.repaint();
@@ -129,7 +131,14 @@ public class ContBusPaciente implements ActionListener{
 						pBusP.pResultados.add(new JLabel("      Numero del familiar: " + pac.getC3()));
 						pBusP.pResultados.add(new JLabel("      Observaciones: " + pac.getC4()));
 						pBusP.pResultados.add(new JLabel("      "));
-
+						pBusP.pResultados.add(new JLabel("-----------------------------Agregado por-----------------------"));
+						pBusP.pResultados.add(new JLabel("      Nombre: " + emp.getNombre()));
+						pBusP.pResultados.add(new JLabel("      Apaterno: " + emp.getAPaterno()));
+						pBusP.pResultados.add(new JLabel("      Amaterno: " + emp.getAMaterno()));
+						pBusP.pResultados.add(new JLabel("      Ocupacion: " + emp.getOcupacion()));
+						
+						
+						pBusP.pResultados.add(new JLabel("      "));
 						// Tension
 						if(pBusP.CB1.isSelected()){
 							Tension ten = new Tension();
