@@ -195,14 +195,14 @@ public class PagIngPaciente extends JFrame
 		//Se crea el panel que estara dentro del Scroll
 		p1.setLayout(null);
 
-		LB1_1 = new JLabel("Nombre(s):");
+		LB1_1 = new JLabel("Apellido paterno:");
 		LB1_1.setBounds(30,10,200,25);
 		p1.add(LB1_1);
 		//Apellidos
-		LB1_2 = new JLabel("Apellido Pat:");
+		LB1_2 = new JLabel("Apellido materno:");
 		LB1_2.setBounds(30,40,200,25);
 		p1.add(LB1_2);
-		LB1_3 = new JLabel("Apellido Mat:");
+		LB1_3 = new JLabel("Apellido nombre(s):");
 		LB1_3.setBounds(30,70,200,25);
 		p1.add(LB1_3);
 		//Sexo

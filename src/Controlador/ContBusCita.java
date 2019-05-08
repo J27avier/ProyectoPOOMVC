@@ -48,7 +48,7 @@ public class ContBusCita implements ActionListener{
 			//Validar apaterno
 			try {
 				String temp = pBusC.tApaterno.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[1] = temp;
 			}
@@ -60,7 +60,7 @@ public class ContBusCita implements ActionListener{
 			//Validar amaterno
 			try {
 				String temp = pBusC.tAmaterno.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[2] = temp;
 			}

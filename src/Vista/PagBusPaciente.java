@@ -1,6 +1,7 @@
 package Vista;
 
 import java.awt.*;
+
 import javax.swing.*;
 
 import com.toedter.calendar.JDateChooser;
@@ -17,7 +18,8 @@ public class PagBusPaciente extends JFrame
   public JTextField TB1_2_1;
   public JTextField TB1_3_1;
   
-  
+  public JPanel pResultados;
+  public JScrollPane pScroll;
   public JCheckBox CB1,CB2,CB3,CB4;
   
   public JButton Buscar1;
@@ -37,15 +39,15 @@ public class PagBusPaciente extends JFrame
     JPanel menuPrincipal = new JPanel();
     menuPrincipal.setLayout(null);
 
-    LB1_1_1 = new JLabel("Nombre(s) del paciente:");
+    LB1_1_1 = new JLabel("Apellido paterno:");
     LB1_1_1.setBounds(30,10,200,25);
     menuPrincipal.add(LB1_1_1);
     
-    LB1_2_1 = new JLabel("Apellido paterno:");
+    LB1_2_1 = new JLabel("Apellido materno:");
     LB1_2_1.setBounds(30,40,200,25);
     menuPrincipal.add(LB1_2_1);
 
-    LB1_3_1 = new JLabel("Apellido materno:");
+    LB1_3_1 = new JLabel("Nombre(S):");
     LB1_3_1.setBounds(30,70,200,25);
     menuPrincipal.add(LB1_3_1);
     
@@ -80,11 +82,14 @@ public class PagBusPaciente extends JFrame
     Buscar1.setBounds(250,130,100,25);
     menuPrincipal.add(Buscar1);
     
+    pResultados = new JPanel();
+    pResultados.setLayout(new BoxLayout(pResultados, BoxLayout.Y_AXIS));
 
-
+    pScroll = new JScrollPane(pResultados);
     cp = getContentPane();
+    cp.setLayout(new GridLayout(2,1,15,15));
     cp.add(menuPrincipal);
-    
+    cp.add(pScroll);
 
   }
 }

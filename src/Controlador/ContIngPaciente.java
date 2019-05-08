@@ -46,31 +46,31 @@ public class ContIngPaciente implements ActionListener{
 			catch(Exception e1) {
 				flag=0;
 				pIngP.TB1_1.setText("");
-				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar un nombre valido");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar un a. paterno valido");
 			}
 			// validar APaterno
 			try {
 				String temp = pIngP.TB1_2.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				pac.setB1_2(temp);
 			}
 			catch(Exception e1) {
 				flag=0;
 				pIngP.TB1_2.setText("");
-				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar un apellido paterno valido");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar un apellido materno valido");
 			}
 			// Validar aMaterno
 			try {
 				String temp = pIngP.TB1_3.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				pac.setB1_3(temp);
 			}
 			catch(Exception e1) {
 				flag=0;
 				pIngP.TB1_3.setText("");
-				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar un apellido materno valido");
+				JOptionPane.showMessageDialog(pIngP, "Favor de ingresar un nombre valido");
 			}
 			// validar edad
 			try {
@@ -1036,24 +1036,23 @@ public class ContIngPaciente implements ActionListener{
 				flag = 0;
 				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad 25.");
 			}
-
-
+			//G26
+			if(pIngP.RBG26_1.isSelected()){
+				GTotal += 0;
+				com.setG26(0);
+			}else if(pIngP.RBG26_2.isSelected()){
+				GTotal += 1;
+				com.setG26(1);
+			}else if(pIngP.RBG26_3.isSelected()){
+				GTotal += 0;
+				com.setG26(-1);
+			}else{
+				flag = 0;
+				JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad zoster.");
+			}
 			if(!pIngP.CBG26_1_4.isSelected()){
 				com.setG26_1_4(0);
-				//G26
-				if(pIngP.RBG26_1.isSelected()){
-					GTotal += 0;
-					com.setG26(0);
-				}else if(pIngP.RBG26_2.isSelected()){
-					GTotal += 1;
-					com.setG26(1);
-				}else if(pIngP.RBG26_3.isSelected()){
-					GTotal += 0;
-					com.setG26(-1);
-				}else{
-					flag = 0;
-					JOptionPane.showMessageDialog(pIngP, "Favor de contestar comorbilidad zoster o no aplica.");
-				}
+				
 				//G26_1_1
 				try {
 					String temp = pIngP.TG26_1_1.getText().toString();

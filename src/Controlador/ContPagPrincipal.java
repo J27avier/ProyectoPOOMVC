@@ -30,6 +30,7 @@ public class ContPagPrincipal implements ActionListener
 		if(evento.getSource() == pPrincipal.Opcion1)
 		{
 			Vista.PagBusPaciente pBusPac = new Vista.PagBusPaciente();
+			ContBusPaciente cBusPac = new ContBusPaciente(pBusPac, conn);
 			pBusPac.setVisible(true);
 		}
 		if(evento.getSource()==pPrincipal.Opcion2){

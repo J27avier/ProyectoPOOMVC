@@ -43,7 +43,7 @@ public class ContIngCita implements ActionListener{
 			//Validar ApaternoP
 			try{
 				String temp = pIngC.tApaternoP.getText().toString(); //
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsP[1]= temp; //
 			}catch(Exception e1){
@@ -54,7 +54,7 @@ public class ContIngCita implements ActionListener{
 			//Validar AMaternoP
 			try{
 				String temp = pIngC.tAmaternoP.getText().toString(); //
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsP[2]= temp; //
 			}catch(Exception e1){
@@ -76,7 +76,7 @@ public class ContIngCita implements ActionListener{
 			//Validar APaternoD
 			try{
 				String temp = pIngC.tApaternoD.getText().toString(); //
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[1]= temp; //
 			}catch(Exception e1){
@@ -87,7 +87,7 @@ public class ContIngCita implements ActionListener{
 			//Validar AMaternoD
 			try{
 				String temp = pIngC.tAmaternoD.getText().toString(); //
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[2]= temp; //
 			}catch(Exception e1){

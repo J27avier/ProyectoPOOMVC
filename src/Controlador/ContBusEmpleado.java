@@ -40,7 +40,7 @@ public class ContBusEmpleado implements ActionListener{
 			//Validar Apellido paterno
 			try{
 				String temp = pBusE.tApaterno.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[1]=temp;
 			}catch(Exception e1){
@@ -51,7 +51,7 @@ public class ContBusEmpleado implements ActionListener{
 			//Validar Apellido materno
 			try{
 				String temp = pBusE.tAmaterno.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				paramsE[2]=temp;
 			}catch(Exception e1){

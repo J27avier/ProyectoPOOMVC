@@ -42,7 +42,7 @@ public class ContIngEmpleado implements ActionListener{
 			//Validar APaterno
 			try {
 				String temp = pIngE.TAPaterno.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				emp.setAPaterno(temp);
 			}
@@ -54,7 +54,7 @@ public class ContIngEmpleado implements ActionListener{
 			//Validar AMaterno
 			try {
 				String temp = pIngE.TAMaterno.getText().toString();
-				if(!temp.matches("^[a-zA-Z]+$"))
+				if(!temp.matches("^[a-zA-Z]+ ?([a-zA-Z]+)?$"))
 					throw new Exception();
 				emp.setAMaterno(temp);
 			}
